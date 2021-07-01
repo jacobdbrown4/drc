@@ -1,0 +1,1680 @@
+MATCH: VCC_TMR_0 ['CARRY4']---['CARRY4'] VCC Port:P
+MATCH: VCC_TMR_1 ['CARRY4']---['CARRY4'] VCC Port:P
+MATCH: VCC_TMR_2 ['CARRY4']---['CARRY4'] VCC Port:P
+MATCH: count[0]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] count[0]_i_1 Port:O
+MATCH: count[0]_i_1_TMR_0 ['mod_counter']---['mod_counter'] count[0]_i_1 Port:I0
+MATCH: count[0]_i_1_TMR_0 ['LUT6']---['LUT6'] count[0]_i_1 Port:I1
+MATCH: count[0]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] count[0]_i_1 Port:O
+MATCH: count[0]_i_1_TMR_1 ['mod_counter']---['mod_counter'] count[0]_i_1 Port:I0
+MATCH: count[0]_i_1_TMR_1 ['LUT6']---['LUT6'] count[0]_i_1 Port:I1
+MATCH: count[0]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] count[0]_i_1 Port:O
+MATCH: count[0]_i_1_TMR_2 ['mod_counter']---['mod_counter'] count[0]_i_1 Port:I0
+MATCH: count[0]_i_1_TMR_2 ['LUT6']---['LUT6'] count[0]_i_1 Port:I1
+MATCH: count[0]_i_3_TMR_0 ['CARRY4']---['CARRY4'] count[0]_i_3 Port:O
+MATCH: count[0]_i_3_TMR_0 ['FDRE']---['FDRE'] count[0]_i_3 Port:I0
+MATCH: count[0]_i_3_TMR_1 ['CARRY4']---['CARRY4'] count[0]_i_3 Port:O
+MATCH: count[0]_i_3_TMR_1 ['FDRE']---['FDRE'] count[0]_i_3 Port:I0
+MATCH: count[0]_i_3_TMR_2 ['CARRY4']---['CARRY4'] count[0]_i_3 Port:O
+MATCH: count[0]_i_3_TMR_2 ['FDRE']---['FDRE'] count[0]_i_3 Port:I0
+MATCH: count[3]_i_2__2_TMR_0 ['LUT2', 'mod_counter']---['LUT2', 'mod_counter'] count[3]_i_2__2 Port:O
+MATCH: count[3]_i_2__2_TMR_0 ['mod_counter']---['mod_counter'] count[3]_i_2__2 Port:I0
+MATCH: count[3]_i_2__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I1
+MATCH: count[3]_i_2__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I2
+MATCH: count[3]_i_2__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I3
+MATCH: count[3]_i_2__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I4
+MATCH: count[3]_i_2__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I5
+MATCH: count[3]_i_2__2_TMR_1 ['LUT2', 'mod_counter']---['LUT2', 'mod_counter'] count[3]_i_2__2 Port:O
+MATCH: count[3]_i_2__2_TMR_1 ['mod_counter']---['mod_counter'] count[3]_i_2__2 Port:I0
+MATCH: count[3]_i_2__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I1
+MATCH: count[3]_i_2__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I2
+MATCH: count[3]_i_2__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I3
+MATCH: count[3]_i_2__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I4
+MATCH: count[3]_i_2__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I5
+MATCH: count[3]_i_2__2_TMR_2 ['LUT2', 'mod_counter']---['LUT2', 'mod_counter'] count[3]_i_2__2 Port:O
+MATCH: count[3]_i_2__2_TMR_2 ['mod_counter']---['mod_counter'] count[3]_i_2__2 Port:I0
+MATCH: count[3]_i_2__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I1
+MATCH: count[3]_i_2__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I2
+MATCH: count[3]_i_2__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I3
+MATCH: count[3]_i_2__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I4
+MATCH: count[3]_i_2__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2__2 Port:I5
+MATCH: count[3]_i_4_TMR_0 ['LUT6']---['LUT6'] count[3]_i_4 Port:O
+MATCH: count[3]_i_4_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4 Port:I0
+MATCH: count[3]_i_4_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4 Port:I1
+MATCH: count[3]_i_4_TMR_0 []---[] count[3]_i_4 Port:I2
+MATCH: count[3]_i_4_TMR_0 []---[] count[3]_i_4 Port:I3
+MATCH: count[3]_i_4_TMR_1 ['LUT6']---['LUT6'] count[3]_i_4 Port:O
+MATCH: count[3]_i_4_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4 Port:I0
+MATCH: count[3]_i_4_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4 Port:I1
+MATCH: count[3]_i_4_TMR_1 []---[] count[3]_i_4 Port:I2
+MATCH: count[3]_i_4_TMR_1 []---[] count[3]_i_4 Port:I3
+MATCH: count[3]_i_4_TMR_2 ['LUT6']---['LUT6'] count[3]_i_4 Port:O
+MATCH: count[3]_i_4_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4 Port:I0
+MATCH: count[3]_i_4_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4 Port:I1
+MATCH: count[3]_i_4_TMR_2 []---[] count[3]_i_4 Port:I2
+MATCH: count[3]_i_4_TMR_2 []---[] count[3]_i_4 Port:I3
+MATCH: count[3]_i_5_TMR_0 ['LUT6']---['LUT6'] count[3]_i_5 Port:O
+MATCH: count[3]_i_5_TMR_0 []---[] count[3]_i_5 Port:I0
+MATCH: count[3]_i_5_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5 Port:I1
+MATCH: count[3]_i_5_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5 Port:I2
+MATCH: count[3]_i_5_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5 Port:I3
+MATCH: count[3]_i_5_TMR_1 ['LUT6']---['LUT6'] count[3]_i_5 Port:O
+MATCH: count[3]_i_5_TMR_1 []---[] count[3]_i_5 Port:I0
+MATCH: count[3]_i_5_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5 Port:I1
+MATCH: count[3]_i_5_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5 Port:I2
+MATCH: count[3]_i_5_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5 Port:I3
+MATCH: count[3]_i_5_TMR_2 ['LUT6']---['LUT6'] count[3]_i_5 Port:O
+MATCH: count[3]_i_5_TMR_2 []---[] count[3]_i_5 Port:I0
+MATCH: count[3]_i_5_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5 Port:I1
+MATCH: count[3]_i_5_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5 Port:I2
+MATCH: count[3]_i_5_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5 Port:I3
+MATCH: count[3]_i_6_TMR_0 ['LUT6']---['LUT6'] count[3]_i_6 Port:O
+MATCH: count[3]_i_6_TMR_0 ['FDRE']---['FDRE'] count[3]_i_6 Port:I0
+MATCH: count[3]_i_6_TMR_0 ['FDRE']---['FDRE'] count[3]_i_6 Port:I1
+MATCH: count[3]_i_6_TMR_0 ['FDRE']---['FDRE'] count[3]_i_6 Port:I2
+MATCH: count[3]_i_6_TMR_0 ['FDRE']---['FDRE'] count[3]_i_6 Port:I3
+MATCH: count[3]_i_6_TMR_1 ['LUT6']---['LUT6'] count[3]_i_6 Port:O
+MATCH: count[3]_i_6_TMR_1 ['FDRE']---['FDRE'] count[3]_i_6 Port:I0
+MATCH: count[3]_i_6_TMR_1 ['FDRE']---['FDRE'] count[3]_i_6 Port:I1
+MATCH: count[3]_i_6_TMR_1 ['FDRE']---['FDRE'] count[3]_i_6 Port:I2
+MATCH: count[3]_i_6_TMR_1 ['FDRE']---['FDRE'] count[3]_i_6 Port:I3
+MATCH: count[3]_i_6_TMR_2 ['LUT6']---['LUT6'] count[3]_i_6 Port:O
+MATCH: count[3]_i_6_TMR_2 ['FDRE']---['FDRE'] count[3]_i_6 Port:I0
+MATCH: count[3]_i_6_TMR_2 ['FDRE']---['FDRE'] count[3]_i_6 Port:I1
+MATCH: count[3]_i_6_TMR_2 ['FDRE']---['FDRE'] count[3]_i_6 Port:I2
+MATCH: count[3]_i_6_TMR_2 ['FDRE']---['FDRE'] count[3]_i_6 Port:I3
+MATCH: count[3]_i_7_TMR_0 ['LUT6']---['LUT6'] count[3]_i_7 Port:O
+MATCH: count[3]_i_7_TMR_0 ['FDRE']---['FDRE'] count[3]_i_7 Port:I0
+MATCH: count[3]_i_7_TMR_0 []---[] count[3]_i_7 Port:I1
+MATCH: count[3]_i_7_TMR_0 []---[] count[3]_i_7 Port:I2
+MATCH: count[3]_i_7_TMR_0 []---[] count[3]_i_7 Port:I3
+MATCH: count[3]_i_7_TMR_1 ['LUT6']---['LUT6'] count[3]_i_7 Port:O
+MATCH: count[3]_i_7_TMR_1 ['FDRE']---['FDRE'] count[3]_i_7 Port:I0
+MATCH: count[3]_i_7_TMR_1 []---[] count[3]_i_7 Port:I1
+MATCH: count[3]_i_7_TMR_1 []---[] count[3]_i_7 Port:I2
+MATCH: count[3]_i_7_TMR_1 []---[] count[3]_i_7 Port:I3
+MATCH: count[3]_i_7_TMR_2 ['LUT6']---['LUT6'] count[3]_i_7 Port:O
+MATCH: count[3]_i_7_TMR_2 ['FDRE']---['FDRE'] count[3]_i_7 Port:I0
+MATCH: count[3]_i_7_TMR_2 []---[] count[3]_i_7 Port:I1
+MATCH: count[3]_i_7_TMR_2 []---[] count[3]_i_7 Port:I2
+MATCH: count[3]_i_7_TMR_2 []---[] count[3]_i_7 Port:I3
+MATCH: count[3]_i_8_TMR_0 ['LUT6']---['LUT6'] count[3]_i_8 Port:O
+MATCH: count[3]_i_8_TMR_0 ['FDRE']---['FDRE'] count[3]_i_8 Port:I0
+MATCH: count[3]_i_8_TMR_0 []---[] count[3]_i_8 Port:I1
+MATCH: count[3]_i_8_TMR_0 []---[] count[3]_i_8 Port:I2
+MATCH: count[3]_i_8_TMR_0 []---[] count[3]_i_8 Port:I3
+MATCH: count[3]_i_8_TMR_1 ['LUT6']---['LUT6'] count[3]_i_8 Port:O
+MATCH: count[3]_i_8_TMR_1 ['FDRE']---['FDRE'] count[3]_i_8 Port:I0
+MATCH: count[3]_i_8_TMR_1 []---[] count[3]_i_8 Port:I1
+MATCH: count[3]_i_8_TMR_1 []---[] count[3]_i_8 Port:I2
+MATCH: count[3]_i_8_TMR_1 []---[] count[3]_i_8 Port:I3
+MATCH: count[3]_i_8_TMR_2 ['LUT6']---['LUT6'] count[3]_i_8 Port:O
+MATCH: count[3]_i_8_TMR_2 ['FDRE']---['FDRE'] count[3]_i_8 Port:I0
+MATCH: count[3]_i_8_TMR_2 []---[] count[3]_i_8 Port:I1
+MATCH: count[3]_i_8_TMR_2 []---[] count[3]_i_8 Port:I2
+MATCH: count[3]_i_8_TMR_2 []---[] count[3]_i_8 Port:I3
+MATCH: count_reg_TMR_0[0] ['LUT1', 'LUT4']---['LUT1', 'LUT4'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_0[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:C
+MATCH: count_reg_TMR_0[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_0[0] ['CARRY4']---['CARRY4'] count_reg[0] Port:D
+MATCH: count_reg_TMR_0[0] ['LUT2']---['LUT2'] count_reg[0] Port:R
+MATCH: count_reg_TMR_1[0] ['LUT1', 'LUT4']---['LUT1', 'LUT4'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_1[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:C
+MATCH: count_reg_TMR_1[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_1[0] ['CARRY4']---['CARRY4'] count_reg[0] Port:D
+MATCH: count_reg_TMR_1[0] ['LUT2']---['LUT2'] count_reg[0] Port:R
+MATCH: count_reg_TMR_2[0] ['LUT1', 'LUT4']---['LUT1', 'LUT4'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_2[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:C
+MATCH: count_reg_TMR_2[0] ['mod_counter']---['mod_counter'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_2[0] ['CARRY4']---['CARRY4'] count_reg[0] Port:D
+MATCH: count_reg_TMR_2[0] ['LUT2']---['LUT2'] count_reg[0] Port:R
+MATCH: count_reg[0]_i_2_TMR_0 ['GND']---['GND'] count_reg[0]_i_2 Port:CI
+MATCH: count_reg[0]_i_2_TMR_0 ['GND']---['GND'] count_reg[0]_i_2 Port:CYINIT
+MATCH: count_reg[0]_i_2_TMR_0 ['CARRY4']---['CARRY4'] count_reg[0]_i_2 Port:CO[3:0]
+MATCH: count_reg[0]_i_2_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[0]_i_2 Port:O[3:0]
+MATCH: count_reg[0]_i_2_TMR_0 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_reg[0]_i_2 Port:DI[3:0]
+MATCH: count_reg[0]_i_2_TMR_0 ['LUT1']---['LUT1'] count_reg[0]_i_2 Port:S[3:0]
+MATCH: count_reg[0]_i_2_TMR_1 ['GND']---['GND'] count_reg[0]_i_2 Port:CI
+MATCH: count_reg[0]_i_2_TMR_1 ['GND']---['GND'] count_reg[0]_i_2 Port:CYINIT
+MATCH: count_reg[0]_i_2_TMR_1 ['CARRY4']---['CARRY4'] count_reg[0]_i_2 Port:CO[3:0]
+MATCH: count_reg[0]_i_2_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[0]_i_2 Port:O[3:0]
+MATCH: count_reg[0]_i_2_TMR_1 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_reg[0]_i_2 Port:DI[3:0]
+MATCH: count_reg[0]_i_2_TMR_1 ['LUT1']---['LUT1'] count_reg[0]_i_2 Port:S[3:0]
+MATCH: count_reg[0]_i_2_TMR_2 ['GND']---['GND'] count_reg[0]_i_2 Port:CI
+MATCH: count_reg[0]_i_2_TMR_2 ['GND']---['GND'] count_reg[0]_i_2 Port:CYINIT
+MATCH: count_reg[0]_i_2_TMR_2 ['CARRY4']---['CARRY4'] count_reg[0]_i_2 Port:CO[3:0]
+MATCH: count_reg[0]_i_2_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[0]_i_2 Port:O[3:0]
+MATCH: count_reg[0]_i_2_TMR_2 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_reg[0]_i_2 Port:DI[3:0]
+MATCH: count_reg[0]_i_2_TMR_2 ['LUT1']---['LUT1'] count_reg[0]_i_2 Port:S[3:0]
+MATCH: count_reg_TMR_0[10] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[10] Port:Q
+MATCH: count_reg_TMR_0[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:C
+MATCH: count_reg_TMR_0[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:CE
+MATCH: count_reg_TMR_0[10] ['CARRY4']---['CARRY4'] count_reg[10] Port:D
+MATCH: count_reg_TMR_0[10] ['LUT2']---['LUT2'] count_reg[10] Port:R
+MATCH: count_reg_TMR_1[10] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[10] Port:Q
+MATCH: count_reg_TMR_1[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:C
+MATCH: count_reg_TMR_1[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:CE
+MATCH: count_reg_TMR_1[10] ['CARRY4']---['CARRY4'] count_reg[10] Port:D
+MATCH: count_reg_TMR_1[10] ['LUT2']---['LUT2'] count_reg[10] Port:R
+MATCH: count_reg_TMR_2[10] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[10] Port:Q
+MATCH: count_reg_TMR_2[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:C
+MATCH: count_reg_TMR_2[10] ['mod_counter']---['mod_counter'] count_reg[10] Port:CE
+MATCH: count_reg_TMR_2[10] ['CARRY4']---['CARRY4'] count_reg[10] Port:D
+MATCH: count_reg_TMR_2[10] ['LUT2']---['LUT2'] count_reg[10] Port:R
+MATCH: count_reg_TMR_0[11] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[11] Port:Q
+MATCH: count_reg_TMR_0[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:C
+MATCH: count_reg_TMR_0[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:CE
+MATCH: count_reg_TMR_0[11] ['CARRY4']---['CARRY4'] count_reg[11] Port:D
+MATCH: count_reg_TMR_0[11] ['LUT2']---['LUT2'] count_reg[11] Port:R
+MATCH: count_reg_TMR_1[11] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[11] Port:Q
+MATCH: count_reg_TMR_1[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:C
+MATCH: count_reg_TMR_1[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:CE
+MATCH: count_reg_TMR_1[11] ['CARRY4']---['CARRY4'] count_reg[11] Port:D
+MATCH: count_reg_TMR_1[11] ['LUT2']---['LUT2'] count_reg[11] Port:R
+MATCH: count_reg_TMR_2[11] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[11] Port:Q
+MATCH: count_reg_TMR_2[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:C
+MATCH: count_reg_TMR_2[11] ['mod_counter']---['mod_counter'] count_reg[11] Port:CE
+MATCH: count_reg_TMR_2[11] ['CARRY4']---['CARRY4'] count_reg[11] Port:D
+MATCH: count_reg_TMR_2[11] ['LUT2']---['LUT2'] count_reg[11] Port:R
+MATCH: count_reg_TMR_0[12] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[12] Port:Q
+MATCH: count_reg_TMR_0[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:C
+MATCH: count_reg_TMR_0[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:CE
+MATCH: count_reg_TMR_0[12] ['CARRY4']---['CARRY4'] count_reg[12] Port:D
+MATCH: count_reg_TMR_0[12] ['LUT2']---['LUT2'] count_reg[12] Port:R
+MATCH: count_reg_TMR_1[12] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[12] Port:Q
+MATCH: count_reg_TMR_1[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:C
+MATCH: count_reg_TMR_1[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:CE
+MATCH: count_reg_TMR_1[12] ['CARRY4']---['CARRY4'] count_reg[12] Port:D
+MATCH: count_reg_TMR_1[12] ['LUT2']---['LUT2'] count_reg[12] Port:R
+MATCH: count_reg_TMR_2[12] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[12] Port:Q
+MATCH: count_reg_TMR_2[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:C
+MATCH: count_reg_TMR_2[12] ['mod_counter']---['mod_counter'] count_reg[12] Port:CE
+MATCH: count_reg_TMR_2[12] ['CARRY4']---['CARRY4'] count_reg[12] Port:D
+MATCH: count_reg_TMR_2[12] ['LUT2']---['LUT2'] count_reg[12] Port:R
+MATCH: count_reg[12]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CI
+MATCH: count_reg[12]_i_1_TMR_0 ['GND']---['GND'] count_reg[12]_i_1 Port:CYINIT
+MATCH: count_reg[12]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_reg[12]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:O[3:0]
+MATCH: count_reg[12]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_reg[12]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:S[3:0]
+MATCH: count_reg[12]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CI
+MATCH: count_reg[12]_i_1_TMR_1 ['GND']---['GND'] count_reg[12]_i_1 Port:CYINIT
+MATCH: count_reg[12]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_reg[12]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:O[3:0]
+MATCH: count_reg[12]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_reg[12]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:S[3:0]
+MATCH: count_reg[12]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CI
+MATCH: count_reg[12]_i_1_TMR_2 ['GND']---['GND'] count_reg[12]_i_1 Port:CYINIT
+MATCH: count_reg[12]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_reg[12]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:O[3:0]
+MATCH: count_reg[12]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_reg[12]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[12]_i_1 Port:S[3:0]
+MATCH: count_reg_TMR_0[13] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[13] Port:Q
+MATCH: count_reg_TMR_0[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:C
+MATCH: count_reg_TMR_0[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:CE
+MATCH: count_reg_TMR_0[13] ['CARRY4']---['CARRY4'] count_reg[13] Port:D
+MATCH: count_reg_TMR_0[13] ['LUT2']---['LUT2'] count_reg[13] Port:R
+MATCH: count_reg_TMR_1[13] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[13] Port:Q
+MATCH: count_reg_TMR_1[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:C
+MATCH: count_reg_TMR_1[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:CE
+MATCH: count_reg_TMR_1[13] ['CARRY4']---['CARRY4'] count_reg[13] Port:D
+MATCH: count_reg_TMR_1[13] ['LUT2']---['LUT2'] count_reg[13] Port:R
+MATCH: count_reg_TMR_2[13] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[13] Port:Q
+MATCH: count_reg_TMR_2[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:C
+MATCH: count_reg_TMR_2[13] ['mod_counter']---['mod_counter'] count_reg[13] Port:CE
+MATCH: count_reg_TMR_2[13] ['CARRY4']---['CARRY4'] count_reg[13] Port:D
+MATCH: count_reg_TMR_2[13] ['LUT2']---['LUT2'] count_reg[13] Port:R
+MATCH: count_reg_TMR_0[14] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[14] Port:Q
+MATCH: count_reg_TMR_0[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:C
+MATCH: count_reg_TMR_0[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:CE
+MATCH: count_reg_TMR_0[14] ['CARRY4']---['CARRY4'] count_reg[14] Port:D
+MATCH: count_reg_TMR_0[14] ['LUT2']---['LUT2'] count_reg[14] Port:R
+MATCH: count_reg_TMR_1[14] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[14] Port:Q
+MATCH: count_reg_TMR_1[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:C
+MATCH: count_reg_TMR_1[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:CE
+MATCH: count_reg_TMR_1[14] ['CARRY4']---['CARRY4'] count_reg[14] Port:D
+MATCH: count_reg_TMR_1[14] ['LUT2']---['LUT2'] count_reg[14] Port:R
+MATCH: count_reg_TMR_2[14] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[14] Port:Q
+MATCH: count_reg_TMR_2[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:C
+MATCH: count_reg_TMR_2[14] ['mod_counter']---['mod_counter'] count_reg[14] Port:CE
+MATCH: count_reg_TMR_2[14] ['CARRY4']---['CARRY4'] count_reg[14] Port:D
+MATCH: count_reg_TMR_2[14] ['LUT2']---['LUT2'] count_reg[14] Port:R
+MATCH: count_reg_TMR_0[15] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[15] Port:Q
+MATCH: count_reg_TMR_0[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:C
+MATCH: count_reg_TMR_0[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:CE
+MATCH: count_reg_TMR_0[15] ['CARRY4']---['CARRY4'] count_reg[15] Port:D
+MATCH: count_reg_TMR_0[15] ['LUT2']---['LUT2'] count_reg[15] Port:R
+MATCH: count_reg_TMR_1[15] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[15] Port:Q
+MATCH: count_reg_TMR_1[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:C
+MATCH: count_reg_TMR_1[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:CE
+MATCH: count_reg_TMR_1[15] ['CARRY4']---['CARRY4'] count_reg[15] Port:D
+MATCH: count_reg_TMR_1[15] ['LUT2']---['LUT2'] count_reg[15] Port:R
+MATCH: count_reg_TMR_2[15] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[15] Port:Q
+MATCH: count_reg_TMR_2[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:C
+MATCH: count_reg_TMR_2[15] ['mod_counter']---['mod_counter'] count_reg[15] Port:CE
+MATCH: count_reg_TMR_2[15] ['CARRY4']---['CARRY4'] count_reg[15] Port:D
+MATCH: count_reg_TMR_2[15] ['LUT2']---['LUT2'] count_reg[15] Port:R
+MATCH: count_reg_TMR_0[16] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[16] Port:Q
+MATCH: count_reg_TMR_0[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:C
+MATCH: count_reg_TMR_0[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:CE
+MATCH: count_reg_TMR_0[16] ['CARRY4']---['CARRY4'] count_reg[16] Port:D
+MATCH: count_reg_TMR_0[16] ['LUT2']---['LUT2'] count_reg[16] Port:R
+MATCH: count_reg_TMR_1[16] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[16] Port:Q
+MATCH: count_reg_TMR_1[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:C
+MATCH: count_reg_TMR_1[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:CE
+MATCH: count_reg_TMR_1[16] ['CARRY4']---['CARRY4'] count_reg[16] Port:D
+MATCH: count_reg_TMR_1[16] ['LUT2']---['LUT2'] count_reg[16] Port:R
+MATCH: count_reg_TMR_2[16] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[16] Port:Q
+MATCH: count_reg_TMR_2[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:C
+MATCH: count_reg_TMR_2[16] ['mod_counter']---['mod_counter'] count_reg[16] Port:CE
+MATCH: count_reg_TMR_2[16] ['CARRY4']---['CARRY4'] count_reg[16] Port:D
+MATCH: count_reg_TMR_2[16] ['LUT2']---['LUT2'] count_reg[16] Port:R
+MATCH: count_reg[16]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[16]_i_1 Port:CI
+MATCH: count_reg[16]_i_1_TMR_0 ['GND']---['GND'] count_reg[16]_i_1 Port:CYINIT
+MATCH: count_reg[16]_i_1_TMR_0 []---[] count_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_reg[16]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:O[3:0]
+MATCH: count_reg[16]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_reg[16]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:S[3:0]
+MATCH: count_reg[16]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[16]_i_1 Port:CI
+MATCH: count_reg[16]_i_1_TMR_1 ['GND']---['GND'] count_reg[16]_i_1 Port:CYINIT
+MATCH: count_reg[16]_i_1_TMR_1 []---[] count_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_reg[16]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:O[3:0]
+MATCH: count_reg[16]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_reg[16]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:S[3:0]
+MATCH: count_reg[16]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[16]_i_1 Port:CI
+MATCH: count_reg[16]_i_1_TMR_2 ['GND']---['GND'] count_reg[16]_i_1 Port:CYINIT
+MATCH: count_reg[16]_i_1_TMR_2 []---[] count_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_reg[16]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:O[3:0]
+MATCH: count_reg[16]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_reg[16]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[16]_i_1 Port:S[3:0]
+MATCH: count_reg_TMR_0[17] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[17] Port:Q
+MATCH: count_reg_TMR_0[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:C
+MATCH: count_reg_TMR_0[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:CE
+MATCH: count_reg_TMR_0[17] ['CARRY4']---['CARRY4'] count_reg[17] Port:D
+MATCH: count_reg_TMR_0[17] ['LUT2']---['LUT2'] count_reg[17] Port:R
+MATCH: count_reg_TMR_1[17] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[17] Port:Q
+MATCH: count_reg_TMR_1[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:C
+MATCH: count_reg_TMR_1[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:CE
+MATCH: count_reg_TMR_1[17] ['CARRY4']---['CARRY4'] count_reg[17] Port:D
+MATCH: count_reg_TMR_1[17] ['LUT2']---['LUT2'] count_reg[17] Port:R
+MATCH: count_reg_TMR_2[17] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[17] Port:Q
+MATCH: count_reg_TMR_2[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:C
+MATCH: count_reg_TMR_2[17] ['mod_counter']---['mod_counter'] count_reg[17] Port:CE
+MATCH: count_reg_TMR_2[17] ['CARRY4']---['CARRY4'] count_reg[17] Port:D
+MATCH: count_reg_TMR_2[17] ['LUT2']---['LUT2'] count_reg[17] Port:R
+MATCH: count_reg_TMR_0[18] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[18] Port:Q
+MATCH: count_reg_TMR_0[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:C
+MATCH: count_reg_TMR_0[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:CE
+MATCH: count_reg_TMR_0[18] ['CARRY4']---['CARRY4'] count_reg[18] Port:D
+MATCH: count_reg_TMR_0[18] ['LUT2']---['LUT2'] count_reg[18] Port:R
+MATCH: count_reg_TMR_1[18] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[18] Port:Q
+MATCH: count_reg_TMR_1[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:C
+MATCH: count_reg_TMR_1[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:CE
+MATCH: count_reg_TMR_1[18] ['CARRY4']---['CARRY4'] count_reg[18] Port:D
+MATCH: count_reg_TMR_1[18] ['LUT2']---['LUT2'] count_reg[18] Port:R
+MATCH: count_reg_TMR_2[18] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[18] Port:Q
+MATCH: count_reg_TMR_2[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:C
+MATCH: count_reg_TMR_2[18] ['mod_counter']---['mod_counter'] count_reg[18] Port:CE
+MATCH: count_reg_TMR_2[18] ['CARRY4']---['CARRY4'] count_reg[18] Port:D
+MATCH: count_reg_TMR_2[18] ['LUT2']---['LUT2'] count_reg[18] Port:R
+MATCH: count_reg_TMR_0[19] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[19] Port:Q
+MATCH: count_reg_TMR_0[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:C
+MATCH: count_reg_TMR_0[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:CE
+MATCH: count_reg_TMR_0[19] ['CARRY4']---['CARRY4'] count_reg[19] Port:D
+MATCH: count_reg_TMR_0[19] ['LUT2']---['LUT2'] count_reg[19] Port:R
+MATCH: count_reg_TMR_1[19] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[19] Port:Q
+MATCH: count_reg_TMR_1[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:C
+MATCH: count_reg_TMR_1[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:CE
+MATCH: count_reg_TMR_1[19] ['CARRY4']---['CARRY4'] count_reg[19] Port:D
+MATCH: count_reg_TMR_1[19] ['LUT2']---['LUT2'] count_reg[19] Port:R
+MATCH: count_reg_TMR_2[19] ['CARRY4', 'LUT4']---['CARRY4', 'LUT4'] count_reg[19] Port:Q
+MATCH: count_reg_TMR_2[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:C
+MATCH: count_reg_TMR_2[19] ['mod_counter']---['mod_counter'] count_reg[19] Port:CE
+MATCH: count_reg_TMR_2[19] ['CARRY4']---['CARRY4'] count_reg[19] Port:D
+MATCH: count_reg_TMR_2[19] ['LUT2']---['LUT2'] count_reg[19] Port:R
+MATCH: count_reg_TMR_0[1] []---[] count_reg[1] Port:Q
+MATCH: count_reg_TMR_0[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:C
+MATCH: count_reg_TMR_0[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_0[1] ['CARRY4']---['CARRY4'] count_reg[1] Port:D
+MATCH: count_reg_TMR_0[1] ['LUT2']---['LUT2'] count_reg[1] Port:R
+MATCH: count_reg_TMR_1[1] []---[] count_reg[1] Port:Q
+MATCH: count_reg_TMR_1[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:C
+MATCH: count_reg_TMR_1[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_1[1] ['CARRY4']---['CARRY4'] count_reg[1] Port:D
+MATCH: count_reg_TMR_1[1] ['LUT2']---['LUT2'] count_reg[1] Port:R
+MATCH: count_reg_TMR_2[1] []---[] count_reg[1] Port:Q
+MATCH: count_reg_TMR_2[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:C
+MATCH: count_reg_TMR_2[1] ['mod_counter']---['mod_counter'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_2[1] ['CARRY4']---['CARRY4'] count_reg[1] Port:D
+MATCH: count_reg_TMR_2[1] ['LUT2']---['LUT2'] count_reg[1] Port:R
+MATCH: count_reg_TMR_0[2] []---[] count_reg[2] Port:Q
+MATCH: count_reg_TMR_0[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:C
+MATCH: count_reg_TMR_0[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_0[2] ['CARRY4']---['CARRY4'] count_reg[2] Port:D
+MATCH: count_reg_TMR_0[2] ['LUT2']---['LUT2'] count_reg[2] Port:R
+MATCH: count_reg_TMR_1[2] []---[] count_reg[2] Port:Q
+MATCH: count_reg_TMR_1[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:C
+MATCH: count_reg_TMR_1[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_1[2] ['CARRY4']---['CARRY4'] count_reg[2] Port:D
+MATCH: count_reg_TMR_1[2] ['LUT2']---['LUT2'] count_reg[2] Port:R
+MATCH: count_reg_TMR_2[2] []---[] count_reg[2] Port:Q
+MATCH: count_reg_TMR_2[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:C
+MATCH: count_reg_TMR_2[2] ['mod_counter']---['mod_counter'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_2[2] ['CARRY4']---['CARRY4'] count_reg[2] Port:D
+MATCH: count_reg_TMR_2[2] ['LUT2']---['LUT2'] count_reg[2] Port:R
+MATCH: count_reg_TMR_0[3] []---[] count_reg[3] Port:Q
+MATCH: count_reg_TMR_0[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:C
+MATCH: count_reg_TMR_0[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_0[3] ['CARRY4']---['CARRY4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_0[3] ['LUT2']---['LUT2'] count_reg[3] Port:R
+MATCH: count_reg_TMR_1[3] []---[] count_reg[3] Port:Q
+MATCH: count_reg_TMR_1[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:C
+MATCH: count_reg_TMR_1[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_1[3] ['CARRY4']---['CARRY4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_1[3] ['LUT2']---['LUT2'] count_reg[3] Port:R
+MATCH: count_reg_TMR_2[3] []---[] count_reg[3] Port:Q
+MATCH: count_reg_TMR_2[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:C
+MATCH: count_reg_TMR_2[3] ['mod_counter']---['mod_counter'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_2[3] ['CARRY4']---['CARRY4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_2[3] ['LUT2']---['LUT2'] count_reg[3] Port:R
+MATCH: count_reg_TMR_0[4] []---[] count_reg[4] Port:Q
+MATCH: count_reg_TMR_0[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:C
+MATCH: count_reg_TMR_0[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:CE
+MATCH: count_reg_TMR_0[4] ['CARRY4']---['CARRY4'] count_reg[4] Port:D
+MATCH: count_reg_TMR_0[4] ['LUT2']---['LUT2'] count_reg[4] Port:R
+MATCH: count_reg_TMR_1[4] []---[] count_reg[4] Port:Q
+MATCH: count_reg_TMR_1[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:C
+MATCH: count_reg_TMR_1[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:CE
+MATCH: count_reg_TMR_1[4] ['CARRY4']---['CARRY4'] count_reg[4] Port:D
+MATCH: count_reg_TMR_1[4] ['LUT2']---['LUT2'] count_reg[4] Port:R
+MATCH: count_reg_TMR_2[4] []---[] count_reg[4] Port:Q
+MATCH: count_reg_TMR_2[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:C
+MATCH: count_reg_TMR_2[4] ['mod_counter']---['mod_counter'] count_reg[4] Port:CE
+MATCH: count_reg_TMR_2[4] ['CARRY4']---['CARRY4'] count_reg[4] Port:D
+MATCH: count_reg_TMR_2[4] ['LUT2']---['LUT2'] count_reg[4] Port:R
+MATCH: count_reg[4]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CI
+MATCH: count_reg[4]_i_1_TMR_0 ['GND']---['GND'] count_reg[4]_i_1 Port:CYINIT
+MATCH: count_reg[4]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_reg[4]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[4]_i_1 Port:O[3:0]
+MATCH: count_reg[4]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_reg[4]_i_1_TMR_0 []---[] count_reg[4]_i_1 Port:S[3:0]
+MATCH: count_reg[4]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CI
+MATCH: count_reg[4]_i_1_TMR_1 ['GND']---['GND'] count_reg[4]_i_1 Port:CYINIT
+MATCH: count_reg[4]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_reg[4]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[4]_i_1 Port:O[3:0]
+MATCH: count_reg[4]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_reg[4]_i_1_TMR_1 []---[] count_reg[4]_i_1 Port:S[3:0]
+MATCH: count_reg[4]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CI
+MATCH: count_reg[4]_i_1_TMR_2 ['GND']---['GND'] count_reg[4]_i_1 Port:CYINIT
+MATCH: count_reg[4]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_reg[4]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[4]_i_1 Port:O[3:0]
+MATCH: count_reg[4]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_reg[4]_i_1_TMR_2 []---[] count_reg[4]_i_1 Port:S[3:0]
+MATCH: count_reg_TMR_0[5] []---[] count_reg[5] Port:Q
+MATCH: count_reg_TMR_0[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:C
+MATCH: count_reg_TMR_0[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:CE
+MATCH: count_reg_TMR_0[5] ['CARRY4']---['CARRY4'] count_reg[5] Port:D
+MATCH: count_reg_TMR_0[5] ['LUT2']---['LUT2'] count_reg[5] Port:R
+MATCH: count_reg_TMR_1[5] []---[] count_reg[5] Port:Q
+MATCH: count_reg_TMR_1[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:C
+MATCH: count_reg_TMR_1[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:CE
+MATCH: count_reg_TMR_1[5] ['CARRY4']---['CARRY4'] count_reg[5] Port:D
+MATCH: count_reg_TMR_1[5] ['LUT2']---['LUT2'] count_reg[5] Port:R
+MATCH: count_reg_TMR_2[5] []---[] count_reg[5] Port:Q
+MATCH: count_reg_TMR_2[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:C
+MATCH: count_reg_TMR_2[5] ['mod_counter']---['mod_counter'] count_reg[5] Port:CE
+MATCH: count_reg_TMR_2[5] ['CARRY4']---['CARRY4'] count_reg[5] Port:D
+MATCH: count_reg_TMR_2[5] ['LUT2']---['LUT2'] count_reg[5] Port:R
+MATCH: count_reg_TMR_0[6] []---[] count_reg[6] Port:Q
+MATCH: count_reg_TMR_0[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:C
+MATCH: count_reg_TMR_0[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:CE
+MATCH: count_reg_TMR_0[6] ['CARRY4']---['CARRY4'] count_reg[6] Port:D
+MATCH: count_reg_TMR_0[6] ['LUT2']---['LUT2'] count_reg[6] Port:R
+MATCH: count_reg_TMR_1[6] []---[] count_reg[6] Port:Q
+MATCH: count_reg_TMR_1[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:C
+MATCH: count_reg_TMR_1[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:CE
+MATCH: count_reg_TMR_1[6] ['CARRY4']---['CARRY4'] count_reg[6] Port:D
+MATCH: count_reg_TMR_1[6] ['LUT2']---['LUT2'] count_reg[6] Port:R
+MATCH: count_reg_TMR_2[6] []---[] count_reg[6] Port:Q
+MATCH: count_reg_TMR_2[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:C
+MATCH: count_reg_TMR_2[6] ['mod_counter']---['mod_counter'] count_reg[6] Port:CE
+MATCH: count_reg_TMR_2[6] ['CARRY4']---['CARRY4'] count_reg[6] Port:D
+MATCH: count_reg_TMR_2[6] ['LUT2']---['LUT2'] count_reg[6] Port:R
+MATCH: count_reg_TMR_0[7] []---[] count_reg[7] Port:Q
+MATCH: count_reg_TMR_0[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:C
+MATCH: count_reg_TMR_0[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:CE
+MATCH: count_reg_TMR_0[7] ['CARRY4']---['CARRY4'] count_reg[7] Port:D
+MATCH: count_reg_TMR_0[7] ['LUT2']---['LUT2'] count_reg[7] Port:R
+MATCH: count_reg_TMR_1[7] []---[] count_reg[7] Port:Q
+MATCH: count_reg_TMR_1[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:C
+MATCH: count_reg_TMR_1[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:CE
+MATCH: count_reg_TMR_1[7] ['CARRY4']---['CARRY4'] count_reg[7] Port:D
+MATCH: count_reg_TMR_1[7] ['LUT2']---['LUT2'] count_reg[7] Port:R
+MATCH: count_reg_TMR_2[7] []---[] count_reg[7] Port:Q
+MATCH: count_reg_TMR_2[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:C
+MATCH: count_reg_TMR_2[7] ['mod_counter']---['mod_counter'] count_reg[7] Port:CE
+MATCH: count_reg_TMR_2[7] ['CARRY4']---['CARRY4'] count_reg[7] Port:D
+MATCH: count_reg_TMR_2[7] ['LUT2']---['LUT2'] count_reg[7] Port:R
+MATCH: count_reg_TMR_0[8] []---[] count_reg[8] Port:Q
+MATCH: count_reg_TMR_0[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:C
+MATCH: count_reg_TMR_0[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:CE
+MATCH: count_reg_TMR_0[8] ['CARRY4']---['CARRY4'] count_reg[8] Port:D
+MATCH: count_reg_TMR_0[8] ['LUT2']---['LUT2'] count_reg[8] Port:R
+MATCH: count_reg_TMR_1[8] []---[] count_reg[8] Port:Q
+MATCH: count_reg_TMR_1[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:C
+MATCH: count_reg_TMR_1[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:CE
+MATCH: count_reg_TMR_1[8] ['CARRY4']---['CARRY4'] count_reg[8] Port:D
+MATCH: count_reg_TMR_1[8] ['LUT2']---['LUT2'] count_reg[8] Port:R
+MATCH: count_reg_TMR_2[8] []---[] count_reg[8] Port:Q
+MATCH: count_reg_TMR_2[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:C
+MATCH: count_reg_TMR_2[8] ['mod_counter']---['mod_counter'] count_reg[8] Port:CE
+MATCH: count_reg_TMR_2[8] ['CARRY4']---['CARRY4'] count_reg[8] Port:D
+MATCH: count_reg_TMR_2[8] ['LUT2']---['LUT2'] count_reg[8] Port:R
+MATCH: count_reg[8]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CI
+MATCH: count_reg[8]_i_1_TMR_0 ['GND']---['GND'] count_reg[8]_i_1 Port:CYINIT
+MATCH: count_reg[8]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_reg[8]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[8]_i_1 Port:O[3:0]
+MATCH: count_reg[8]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_reg[8]_i_1_TMR_0 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_reg[8]_i_1 Port:S[3:0]
+MATCH: count_reg[8]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CI
+MATCH: count_reg[8]_i_1_TMR_1 ['GND']---['GND'] count_reg[8]_i_1 Port:CYINIT
+MATCH: count_reg[8]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_reg[8]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[8]_i_1 Port:O[3:0]
+MATCH: count_reg[8]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_reg[8]_i_1_TMR_1 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_reg[8]_i_1 Port:S[3:0]
+MATCH: count_reg[8]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CI
+MATCH: count_reg[8]_i_1_TMR_2 ['GND']---['GND'] count_reg[8]_i_1 Port:CYINIT
+MATCH: count_reg[8]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_reg[8]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_reg[8]_i_1 Port:O[3:0]
+MATCH: count_reg[8]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_reg[8]_i_1_TMR_2 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_reg[8]_i_1 Port:S[3:0]
+MATCH: count_reg_TMR_0[9] []---[] count_reg[9] Port:Q
+MATCH: count_reg_TMR_0[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:C
+MATCH: count_reg_TMR_0[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:CE
+MATCH: count_reg_TMR_0[9] ['CARRY4']---['CARRY4'] count_reg[9] Port:D
+MATCH: count_reg_TMR_0[9] ['LUT2']---['LUT2'] count_reg[9] Port:R
+MATCH: count_reg_TMR_1[9] []---[] count_reg[9] Port:Q
+MATCH: count_reg_TMR_1[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:C
+MATCH: count_reg_TMR_1[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:CE
+MATCH: count_reg_TMR_1[9] ['CARRY4']---['CARRY4'] count_reg[9] Port:D
+MATCH: count_reg_TMR_1[9] ['LUT2']---['LUT2'] count_reg[9] Port:R
+MATCH: count_reg_TMR_2[9] []---[] count_reg[9] Port:Q
+MATCH: count_reg_TMR_2[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:C
+MATCH: count_reg_TMR_2[9] ['mod_counter']---['mod_counter'] count_reg[9] Port:CE
+MATCH: count_reg_TMR_2[9] ['CARRY4']---['CARRY4'] count_reg[9] Port:D
+MATCH: count_reg_TMR_2[9] ['LUT2']---['LUT2'] count_reg[9] Port:R
+MATCH: count[0]_i_1__3_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:O
+MATCH: count[0]_i_1__3_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:I0
+MATCH: count[0]_i_1__3_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:O
+MATCH: count[0]_i_1__3_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:I0
+MATCH: count[0]_i_1__3_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:O
+MATCH: count[0]_i_1__3_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__3 Port:I0
+MATCH: count[1]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:O
+MATCH: count[1]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I0
+MATCH: count[1]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I1
+MATCH: count[1]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:O
+MATCH: count[1]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I0
+MATCH: count[1]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I1
+MATCH: count[1]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:O
+MATCH: count[1]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I0
+MATCH: count[1]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__2 Port:I1
+MATCH: count[2]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:O
+MATCH: count[2]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I0
+MATCH: count[2]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I1
+MATCH: count[2]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I2
+MATCH: count[2]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:O
+MATCH: count[2]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I0
+MATCH: count[2]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I1
+MATCH: count[2]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I2
+MATCH: count[2]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:O
+MATCH: count[2]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I0
+MATCH: count[2]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I1
+MATCH: count[2]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__2 Port:I2
+MATCH: count[3]_i_1__2_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__2 Port:O
+MATCH: count[3]_i_1__2_TMR_0 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I0
+MATCH: count[3]_i_1__2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_1__2 Port:I1
+MATCH: count[3]_i_1__2_TMR_0 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I2
+MATCH: count[3]_i_1__2_TMR_0 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I3
+MATCH: count[3]_i_1__2_TMR_0 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I4
+MATCH: count[3]_i_1__2_TMR_0 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I5
+MATCH: count[3]_i_1__2_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__2 Port:O
+MATCH: count[3]_i_1__2_TMR_1 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I0
+MATCH: count[3]_i_1__2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_1__2 Port:I1
+MATCH: count[3]_i_1__2_TMR_1 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I2
+MATCH: count[3]_i_1__2_TMR_1 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I3
+MATCH: count[3]_i_1__2_TMR_1 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I4
+MATCH: count[3]_i_1__2_TMR_1 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I5
+MATCH: count[3]_i_1__2_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__2 Port:O
+MATCH: count[3]_i_1__2_TMR_2 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I0
+MATCH: count[3]_i_1__2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_1__2 Port:I1
+MATCH: count[3]_i_1__2_TMR_2 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I2
+MATCH: count[3]_i_1__2_TMR_2 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I3
+MATCH: count[3]_i_1__2_TMR_2 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I4
+MATCH: count[3]_i_1__2_TMR_2 ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count[3]_i_1__2 Port:I5
+MATCH: count[3]_i_3__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:O
+MATCH: count[3]_i_3__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I0
+MATCH: count[3]_i_3__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I1
+MATCH: count[3]_i_3__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I2
+MATCH: count[3]_i_3__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I3
+MATCH: count[3]_i_3__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:O
+MATCH: count[3]_i_3__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I0
+MATCH: count[3]_i_3__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I1
+MATCH: count[3]_i_3__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I2
+MATCH: count[3]_i_3__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I3
+MATCH: count[3]_i_3__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:O
+MATCH: count[3]_i_3__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I0
+MATCH: count[3]_i_3__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I1
+MATCH: count[3]_i_3__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I2
+MATCH: count[3]_i_3__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__2 Port:I3
+MATCH: count[3]_i_4__2_TMR_0 ['LUT6']---['LUT6'] count[3]_i_4__2 Port:O
+MATCH: count[3]_i_4__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I0
+MATCH: count[3]_i_4__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I1
+MATCH: count[3]_i_4__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I2
+MATCH: count[3]_i_4__2_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I3
+MATCH: count[3]_i_4__2_TMR_1 ['LUT6']---['LUT6'] count[3]_i_4__2 Port:O
+MATCH: count[3]_i_4__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I0
+MATCH: count[3]_i_4__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I1
+MATCH: count[3]_i_4__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I2
+MATCH: count[3]_i_4__2_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I3
+MATCH: count[3]_i_4__2_TMR_2 ['LUT6']---['LUT6'] count[3]_i_4__2 Port:O
+MATCH: count[3]_i_4__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I0
+MATCH: count[3]_i_4__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I1
+MATCH: count[3]_i_4__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I2
+MATCH: count[3]_i_4__2_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__2 Port:I3
+MATCH: count_reg_TMR_0[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_0[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_0[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_1[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_1[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_1[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_2[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_2[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_2[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_0[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_0[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_0[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_1[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_1[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_1[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_2[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_2[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_2[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_0[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_0[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_0[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_1[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_1[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_1[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_2[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_2[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_2[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_0[3] ['LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_0[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_0[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: count_reg_TMR_1[3] ['LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_1[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_1[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: count_reg_TMR_2[3] ['LUT4', 'LUT4', 'mod_counter__parameterized1']---['LUT4', 'LUT4', 'mod_counter__parameterized1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized1']---['mod_counter__parameterized1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_2[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_2[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: count[0]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:O
+MATCH: count[0]_i_1__2_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:I0
+MATCH: count[0]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:O
+MATCH: count[0]_i_1__2_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:I0
+MATCH: count[0]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:O
+MATCH: count[0]_i_1__2_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__2 Port:I0
+MATCH: count[1]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:O
+MATCH: count[1]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I0
+MATCH: count[1]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I1
+MATCH: count[1]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:O
+MATCH: count[1]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I0
+MATCH: count[1]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I1
+MATCH: count[1]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:O
+MATCH: count[1]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I0
+MATCH: count[1]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__1 Port:I1
+MATCH: count[2]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:O
+MATCH: count[2]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I0
+MATCH: count[2]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I1
+MATCH: count[2]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I2
+MATCH: count[2]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:O
+MATCH: count[2]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I0
+MATCH: count[2]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I1
+MATCH: count[2]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I2
+MATCH: count[2]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:O
+MATCH: count[2]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I0
+MATCH: count[2]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I1
+MATCH: count[2]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__1 Port:I2
+MATCH: count[3]_i_1__1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__1 Port:O
+MATCH: count[3]_i_1__1_TMR_0 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I0
+MATCH: count[3]_i_1__1_TMR_0 ['LUT4']---['LUT4'] count[3]_i_1__1 Port:I1
+MATCH: count[3]_i_1__1_TMR_0 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I2
+MATCH: count[3]_i_1__1_TMR_0 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I3
+MATCH: count[3]_i_1__1_TMR_0 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I4
+MATCH: count[3]_i_1__1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__1 Port:O
+MATCH: count[3]_i_1__1_TMR_1 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I0
+MATCH: count[3]_i_1__1_TMR_1 ['LUT4']---['LUT4'] count[3]_i_1__1 Port:I1
+MATCH: count[3]_i_1__1_TMR_1 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I2
+MATCH: count[3]_i_1__1_TMR_1 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I3
+MATCH: count[3]_i_1__1_TMR_1 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I4
+MATCH: count[3]_i_1__1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__1 Port:O
+MATCH: count[3]_i_1__1_TMR_2 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I0
+MATCH: count[3]_i_1__1_TMR_2 ['LUT4']---['LUT4'] count[3]_i_1__1 Port:I1
+MATCH: count[3]_i_1__1_TMR_2 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I2
+MATCH: count[3]_i_1__1_TMR_2 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I3
+MATCH: count[3]_i_1__1_TMR_2 ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count[3]_i_1__1 Port:I4
+MATCH: count[3]_i_3__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:O
+MATCH: count[3]_i_3__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I0
+MATCH: count[3]_i_3__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I1
+MATCH: count[3]_i_3__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I2
+MATCH: count[3]_i_3__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I3
+MATCH: count[3]_i_3__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:O
+MATCH: count[3]_i_3__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I0
+MATCH: count[3]_i_3__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I1
+MATCH: count[3]_i_3__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I2
+MATCH: count[3]_i_3__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I3
+MATCH: count[3]_i_3__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:O
+MATCH: count[3]_i_3__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I0
+MATCH: count[3]_i_3__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I1
+MATCH: count[3]_i_3__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I2
+MATCH: count[3]_i_3__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__1 Port:I3
+MATCH: count[3]_i_4__1_TMR_0 ['LUT5', 'mod_counter__parameterized0_1']---['LUT5', 'mod_counter__parameterized0_1'] count[3]_i_4__1 Port:O
+MATCH: count[3]_i_4__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I0
+MATCH: count[3]_i_4__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I1
+MATCH: count[3]_i_4__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I2
+MATCH: count[3]_i_4__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I3
+MATCH: count[3]_i_4__1_TMR_1 ['LUT5', 'mod_counter__parameterized0_1']---['LUT5', 'mod_counter__parameterized0_1'] count[3]_i_4__1 Port:O
+MATCH: count[3]_i_4__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I0
+MATCH: count[3]_i_4__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I1
+MATCH: count[3]_i_4__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I2
+MATCH: count[3]_i_4__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I3
+MATCH: count[3]_i_4__1_TMR_2 ['LUT5', 'mod_counter__parameterized0_1']---['LUT5', 'mod_counter__parameterized0_1'] count[3]_i_4__1 Port:O
+MATCH: count[3]_i_4__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I0
+MATCH: count[3]_i_4__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I1
+MATCH: count[3]_i_4__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I2
+MATCH: count[3]_i_4__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__1 Port:I3
+MATCH: count_reg_TMR_0[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_0[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_0[0] ['LUT5']---['LUT5'] count_reg[0] Port:R
+MATCH: count_reg_TMR_1[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_1[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_1[0] ['LUT5']---['LUT5'] count_reg[0] Port:R
+MATCH: count_reg_TMR_2[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:C
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_2[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_2[0] ['LUT5']---['LUT5'] count_reg[0] Port:R
+MATCH: count_reg_TMR_0[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_0[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_0[1] ['LUT5']---['LUT5'] count_reg[1] Port:R
+MATCH: count_reg_TMR_1[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_1[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_1[1] ['LUT5']---['LUT5'] count_reg[1] Port:R
+MATCH: count_reg_TMR_2[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:C
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_2[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_2[1] ['LUT5']---['LUT5'] count_reg[1] Port:R
+MATCH: count_reg_TMR_0[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_0[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_0[2] ['LUT5']---['LUT5'] count_reg[2] Port:R
+MATCH: count_reg_TMR_1[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_1[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_1[2] ['LUT5']---['LUT5'] count_reg[2] Port:R
+MATCH: count_reg_TMR_2[2] ['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT3', 'LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:C
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_2[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_2[2] ['LUT5']---['LUT5'] count_reg[2] Port:R
+MATCH: count_reg_TMR_0[3] ['LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_0[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_0[3] ['LUT5']---['LUT5'] count_reg[3] Port:R
+MATCH: count_reg_TMR_1[3] ['LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_1[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_1[3] ['LUT5']---['LUT5'] count_reg[3] Port:R
+MATCH: count_reg_TMR_2[3] ['LUT4', 'LUT4', 'mod_counter__parameterized0_1']---['LUT4', 'LUT4', 'mod_counter__parameterized0_1'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:C
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0_1']---['mod_counter__parameterized0_1'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_2[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_2[3] ['LUT5']---['LUT5'] count_reg[3] Port:R
+MATCH: count[0]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:O
+MATCH: count[0]_i_1__1_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:I0
+MATCH: count[0]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:O
+MATCH: count[0]_i_1__1_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:I0
+MATCH: count[0]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:O
+MATCH: count[0]_i_1__1_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__1 Port:I0
+MATCH: count[1]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:O
+MATCH: count[1]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I0
+MATCH: count[1]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I1
+MATCH: count[1]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:O
+MATCH: count[1]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I0
+MATCH: count[1]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I1
+MATCH: count[1]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:O
+MATCH: count[1]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I0
+MATCH: count[1]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1__0 Port:I1
+MATCH: count[2]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:O
+MATCH: count[2]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I0
+MATCH: count[2]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I1
+MATCH: count[2]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I2
+MATCH: count[2]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:O
+MATCH: count[2]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I0
+MATCH: count[2]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I1
+MATCH: count[2]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I2
+MATCH: count[2]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:O
+MATCH: count[2]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I0
+MATCH: count[2]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I1
+MATCH: count[2]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1__0 Port:I2
+MATCH: count[3]_i_1__0_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__0 Port:O
+MATCH: count[3]_i_1__0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I0
+MATCH: count[3]_i_1__0_TMR_0 ['LUT4']---['LUT4'] count[3]_i_1__0 Port:I1
+MATCH: count[3]_i_1__0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I2
+MATCH: count[3]_i_1__0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I3
+MATCH: count[3]_i_1__0_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__0 Port:O
+MATCH: count[3]_i_1__0_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I0
+MATCH: count[3]_i_1__0_TMR_1 ['LUT4']---['LUT4'] count[3]_i_1__0 Port:I1
+MATCH: count[3]_i_1__0_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I2
+MATCH: count[3]_i_1__0_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I3
+MATCH: count[3]_i_1__0_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1__0 Port:O
+MATCH: count[3]_i_1__0_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I0
+MATCH: count[3]_i_1__0_TMR_2 ['LUT4']---['LUT4'] count[3]_i_1__0 Port:I1
+MATCH: count[3]_i_1__0_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I2
+MATCH: count[3]_i_1__0_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_1__0 Port:I3
+MATCH: count[3]_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:O
+MATCH: count[3]_i_2_TMR_0 ['LUT4']---['LUT4'] count[3]_i_2 Port:I0
+MATCH: count[3]_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I1
+MATCH: count[3]_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I2
+MATCH: count[3]_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I3
+MATCH: count[3]_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:O
+MATCH: count[3]_i_2_TMR_1 ['LUT4']---['LUT4'] count[3]_i_2 Port:I0
+MATCH: count[3]_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I1
+MATCH: count[3]_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I2
+MATCH: count[3]_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I3
+MATCH: count[3]_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:O
+MATCH: count[3]_i_2_TMR_2 ['LUT4']---['LUT4'] count[3]_i_2 Port:I0
+MATCH: count[3]_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I1
+MATCH: count[3]_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I2
+MATCH: count[3]_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count[3]_i_2 Port:I3
+MATCH: count[3]_i_3__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:O
+MATCH: count[3]_i_3__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I0
+MATCH: count[3]_i_3__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I1
+MATCH: count[3]_i_3__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I2
+MATCH: count[3]_i_3__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I3
+MATCH: count[3]_i_3__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:O
+MATCH: count[3]_i_3__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I0
+MATCH: count[3]_i_3__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I1
+MATCH: count[3]_i_3__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I2
+MATCH: count[3]_i_3__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I3
+MATCH: count[3]_i_3__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:O
+MATCH: count[3]_i_3__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I0
+MATCH: count[3]_i_3__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I1
+MATCH: count[3]_i_3__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I2
+MATCH: count[3]_i_3__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3__0 Port:I3
+MATCH: count[3]_i_4__0_TMR_0 ['LUT4', 'LUT4', 'mod_counter__parameterized0_0']---['LUT4', 'LUT4', 'mod_counter__parameterized0_0'] count[3]_i_4__0 Port:O
+MATCH: count[3]_i_4__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I0
+MATCH: count[3]_i_4__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I1
+MATCH: count[3]_i_4__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I2
+MATCH: count[3]_i_4__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I3
+MATCH: count[3]_i_4__0_TMR_1 ['LUT4', 'LUT4', 'mod_counter__parameterized0_0']---['LUT4', 'LUT4', 'mod_counter__parameterized0_0'] count[3]_i_4__0 Port:O
+MATCH: count[3]_i_4__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I0
+MATCH: count[3]_i_4__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I1
+MATCH: count[3]_i_4__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I2
+MATCH: count[3]_i_4__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I3
+MATCH: count[3]_i_4__0_TMR_2 ['LUT4', 'LUT4', 'mod_counter__parameterized0_0']---['LUT4', 'LUT4', 'mod_counter__parameterized0_0'] count[3]_i_4__0 Port:O
+MATCH: count[3]_i_4__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I0
+MATCH: count[3]_i_4__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I1
+MATCH: count[3]_i_4__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I2
+MATCH: count[3]_i_4__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_4__0 Port:I3
+MATCH: count_reg_TMR_0[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_0[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_0[0] ['LUT4']---['LUT4'] count_reg[0] Port:R
+MATCH: count_reg_TMR_1[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_1[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_1[0] ['LUT4']---['LUT4'] count_reg[0] Port:R
+MATCH: count_reg_TMR_2[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_2[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_2[0] ['LUT4']---['LUT4'] count_reg[0] Port:R
+MATCH: count_reg_TMR_0[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_0[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_0[1] ['LUT4']---['LUT4'] count_reg[1] Port:R
+MATCH: count_reg_TMR_1[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_1[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_1[1] ['LUT4']---['LUT4'] count_reg[1] Port:R
+MATCH: count_reg_TMR_2[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_2[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_2[1] ['LUT4']---['LUT4'] count_reg[1] Port:R
+MATCH: count_reg_TMR_0[2] ['LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_0[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_0[2] ['LUT4']---['LUT4'] count_reg[2] Port:R
+MATCH: count_reg_TMR_1[2] ['LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_1[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_1[2] ['LUT4']---['LUT4'] count_reg[2] Port:R
+MATCH: count_reg_TMR_2[2] ['LUT3', 'LUT4', 'LUT4', 'LUT6']---['LUT3', 'LUT4', 'LUT4', 'LUT6'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_2[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_2[2] ['LUT4']---['LUT4'] count_reg[2] Port:R
+MATCH: count_reg_TMR_0[3] ['LUT4', 'LUT4', 'LUT6']---['LUT4', 'LUT4', 'LUT6'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_0[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_0[3] ['LUT4']---['LUT4'] count_reg[3] Port:R
+MATCH: count_reg_TMR_1[3] ['LUT4', 'LUT4', 'LUT6']---['LUT4', 'LUT4', 'LUT6'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_1[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_1[3] ['LUT4']---['LUT4'] count_reg[3] Port:R
+MATCH: count_reg_TMR_2[3] ['LUT4', 'LUT4', 'LUT6']---['LUT4', 'LUT4', 'LUT6'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_2[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_2[3] ['LUT4']---['LUT4'] count_reg[3] Port:R
+MATCH: segment[0]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[0]_INST_0 Port:O
+MATCH: segment[0]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I0
+MATCH: segment[0]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I1
+MATCH: segment[0]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I2
+MATCH: segment[0]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I3
+NOT MATCH: segment[0]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[0]_INST_0 Port:O
+MATCH: segment[0]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I0
+MATCH: segment[0]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I1
+MATCH: segment[0]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I2
+MATCH: segment[0]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I3
+NOT MATCH: segment[0]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[0]_INST_0 Port:O
+MATCH: segment[0]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I0
+MATCH: segment[0]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I1
+MATCH: segment[0]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I2
+MATCH: segment[0]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[0]_INST_0 Port:I3
+MATCH: segment[1]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[1]_INST_0 Port:O
+MATCH: segment[1]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I0
+MATCH: segment[1]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I1
+MATCH: segment[1]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I2
+MATCH: segment[1]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I3
+NOT MATCH: segment[1]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[1]_INST_0 Port:O
+MATCH: segment[1]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I0
+MATCH: segment[1]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I1
+MATCH: segment[1]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I2
+MATCH: segment[1]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I3
+NOT MATCH: segment[1]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[1]_INST_0 Port:O
+MATCH: segment[1]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I0
+MATCH: segment[1]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I1
+MATCH: segment[1]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I2
+MATCH: segment[1]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[1]_INST_0 Port:I3
+MATCH: segment[2]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[2]_INST_0 Port:O
+MATCH: segment[2]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I0
+MATCH: segment[2]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I1
+MATCH: segment[2]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I2
+MATCH: segment[2]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I3
+NOT MATCH: segment[2]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[2]_INST_0 Port:O
+MATCH: segment[2]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I0
+MATCH: segment[2]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I1
+MATCH: segment[2]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I2
+MATCH: segment[2]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I3
+NOT MATCH: segment[2]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[2]_INST_0 Port:O
+MATCH: segment[2]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I0
+MATCH: segment[2]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I1
+MATCH: segment[2]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I2
+MATCH: segment[2]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[2]_INST_0 Port:I3
+MATCH: segment[3]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[3]_INST_0 Port:O
+MATCH: segment[3]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I0
+MATCH: segment[3]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I1
+MATCH: segment[3]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I2
+MATCH: segment[3]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I3
+NOT MATCH: segment[3]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[3]_INST_0 Port:O
+MATCH: segment[3]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I0
+MATCH: segment[3]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I1
+MATCH: segment[3]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I2
+MATCH: segment[3]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I3
+NOT MATCH: segment[3]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[3]_INST_0 Port:O
+MATCH: segment[3]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I0
+MATCH: segment[3]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I1
+MATCH: segment[3]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I2
+MATCH: segment[3]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[3]_INST_0 Port:I3
+MATCH: segment[4]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[4]_INST_0 Port:O
+MATCH: segment[4]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I0
+MATCH: segment[4]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I1
+MATCH: segment[4]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I2
+MATCH: segment[4]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I3
+NOT MATCH: segment[4]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[4]_INST_0 Port:O
+MATCH: segment[4]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I0
+MATCH: segment[4]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I1
+MATCH: segment[4]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I2
+MATCH: segment[4]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I3
+NOT MATCH: segment[4]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[4]_INST_0 Port:O
+MATCH: segment[4]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I0
+MATCH: segment[4]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I1
+MATCH: segment[4]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I2
+MATCH: segment[4]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[4]_INST_0 Port:I3
+MATCH: segment[5]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[5]_INST_0 Port:O
+MATCH: segment[5]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I0
+MATCH: segment[5]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I1
+MATCH: segment[5]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I2
+MATCH: segment[5]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I3
+NOT MATCH: segment[5]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[5]_INST_0 Port:O
+MATCH: segment[5]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I0
+MATCH: segment[5]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I1
+MATCH: segment[5]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I2
+MATCH: segment[5]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I3
+NOT MATCH: segment[5]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[5]_INST_0 Port:O
+MATCH: segment[5]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I0
+MATCH: segment[5]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I1
+MATCH: segment[5]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I2
+MATCH: segment[5]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[5]_INST_0 Port:I3
+MATCH: segment[6]_INST_0_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0 Port:O
+MATCH: segment[6]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I0
+MATCH: segment[6]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I1
+MATCH: segment[6]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I2
+MATCH: segment[6]_INST_0_TMR_0 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I3
+NOT MATCH: segment[6]_INST_0_TMR_1 []---['mod_counter__parameterized0_0'] segment[6]_INST_0 Port:O
+MATCH: segment[6]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I0
+MATCH: segment[6]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I1
+MATCH: segment[6]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I2
+MATCH: segment[6]_INST_0_TMR_1 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I3
+NOT MATCH: segment[6]_INST_0_TMR_2 []---['mod_counter__parameterized0_0'] segment[6]_INST_0 Port:O
+MATCH: segment[6]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I0
+MATCH: segment[6]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I1
+MATCH: segment[6]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I2
+MATCH: segment[6]_INST_0_TMR_2 ['LUT6']---['LUT6'] segment[6]_INST_0 Port:I3
+MATCH: segment[6]_INST_0_i_1_TMR_0 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_1 Port:O
+MATCH: segment[6]_INST_0_i_1_TMR_0 ['FDRE']---['FDRE'] segment[6]_INST_0_i_1 Port:I0
+MATCH: segment[6]_INST_0_i_1_TMR_0 []---[] segment[6]_INST_0_i_1 Port:I1
+MATCH: segment[6]_INST_0_i_1_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I2
+MATCH: segment[6]_INST_0_i_1_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I3
+MATCH: segment[6]_INST_0_i_1_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I4
+MATCH: segment[6]_INST_0_i_1_TMR_0 []---[] segment[6]_INST_0_i_1 Port:I5
+MATCH: segment[6]_INST_0_i_1_TMR_1 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_1 Port:O
+MATCH: segment[6]_INST_0_i_1_TMR_1 ['FDRE']---['FDRE'] segment[6]_INST_0_i_1 Port:I0
+MATCH: segment[6]_INST_0_i_1_TMR_1 []---[] segment[6]_INST_0_i_1 Port:I1
+MATCH: segment[6]_INST_0_i_1_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I2
+MATCH: segment[6]_INST_0_i_1_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I3
+MATCH: segment[6]_INST_0_i_1_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I4
+MATCH: segment[6]_INST_0_i_1_TMR_1 []---[] segment[6]_INST_0_i_1 Port:I5
+MATCH: segment[6]_INST_0_i_1_TMR_2 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_1 Port:O
+MATCH: segment[6]_INST_0_i_1_TMR_2 ['FDRE']---['FDRE'] segment[6]_INST_0_i_1 Port:I0
+MATCH: segment[6]_INST_0_i_1_TMR_2 []---[] segment[6]_INST_0_i_1 Port:I1
+MATCH: segment[6]_INST_0_i_1_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I2
+MATCH: segment[6]_INST_0_i_1_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I3
+MATCH: segment[6]_INST_0_i_1_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_1 Port:I4
+MATCH: segment[6]_INST_0_i_1_TMR_2 []---[] segment[6]_INST_0_i_1 Port:I5
+MATCH: segment[6]_INST_0_i_2_TMR_0 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_2 Port:O
+MATCH: segment[6]_INST_0_i_2_TMR_0 ['FDRE']---['FDRE'] segment[6]_INST_0_i_2 Port:I0
+MATCH: segment[6]_INST_0_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I1
+MATCH: segment[6]_INST_0_i_2_TMR_0 []---[] segment[6]_INST_0_i_2 Port:I2
+MATCH: segment[6]_INST_0_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I3
+MATCH: segment[6]_INST_0_i_2_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I4
+MATCH: segment[6]_INST_0_i_2_TMR_0 []---[] segment[6]_INST_0_i_2 Port:I5
+MATCH: segment[6]_INST_0_i_2_TMR_1 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_2 Port:O
+MATCH: segment[6]_INST_0_i_2_TMR_1 ['FDRE']---['FDRE'] segment[6]_INST_0_i_2 Port:I0
+MATCH: segment[6]_INST_0_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I1
+MATCH: segment[6]_INST_0_i_2_TMR_1 []---[] segment[6]_INST_0_i_2 Port:I2
+MATCH: segment[6]_INST_0_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I3
+MATCH: segment[6]_INST_0_i_2_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I4
+MATCH: segment[6]_INST_0_i_2_TMR_1 []---[] segment[6]_INST_0_i_2 Port:I5
+MATCH: segment[6]_INST_0_i_2_TMR_2 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_2 Port:O
+MATCH: segment[6]_INST_0_i_2_TMR_2 ['FDRE']---['FDRE'] segment[6]_INST_0_i_2 Port:I0
+MATCH: segment[6]_INST_0_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I1
+MATCH: segment[6]_INST_0_i_2_TMR_2 []---[] segment[6]_INST_0_i_2 Port:I2
+MATCH: segment[6]_INST_0_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I3
+MATCH: segment[6]_INST_0_i_2_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_2 Port:I4
+MATCH: segment[6]_INST_0_i_2_TMR_2 []---[] segment[6]_INST_0_i_2 Port:I5
+MATCH: segment[6]_INST_0_i_3_TMR_0 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_3 Port:O
+MATCH: segment[6]_INST_0_i_3_TMR_0 ['FDRE']---['FDRE'] segment[6]_INST_0_i_3 Port:I0
+MATCH: segment[6]_INST_0_i_3_TMR_0 []---[] segment[6]_INST_0_i_3 Port:I1
+MATCH: segment[6]_INST_0_i_3_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I2
+MATCH: segment[6]_INST_0_i_3_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I3
+MATCH: segment[6]_INST_0_i_3_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I4
+MATCH: segment[6]_INST_0_i_3_TMR_0 []---[] segment[6]_INST_0_i_3 Port:I5
+MATCH: segment[6]_INST_0_i_3_TMR_1 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_3 Port:O
+MATCH: segment[6]_INST_0_i_3_TMR_1 ['FDRE']---['FDRE'] segment[6]_INST_0_i_3 Port:I0
+MATCH: segment[6]_INST_0_i_3_TMR_1 []---[] segment[6]_INST_0_i_3 Port:I1
+MATCH: segment[6]_INST_0_i_3_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I2
+MATCH: segment[6]_INST_0_i_3_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I3
+MATCH: segment[6]_INST_0_i_3_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I4
+MATCH: segment[6]_INST_0_i_3_TMR_1 []---[] segment[6]_INST_0_i_3 Port:I5
+MATCH: segment[6]_INST_0_i_3_TMR_2 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_3 Port:O
+MATCH: segment[6]_INST_0_i_3_TMR_2 ['FDRE']---['FDRE'] segment[6]_INST_0_i_3 Port:I0
+MATCH: segment[6]_INST_0_i_3_TMR_2 []---[] segment[6]_INST_0_i_3 Port:I1
+MATCH: segment[6]_INST_0_i_3_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I2
+MATCH: segment[6]_INST_0_i_3_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I3
+MATCH: segment[6]_INST_0_i_3_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_3 Port:I4
+MATCH: segment[6]_INST_0_i_3_TMR_2 []---[] segment[6]_INST_0_i_3 Port:I5
+MATCH: segment[6]_INST_0_i_4_TMR_0 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_4 Port:O
+MATCH: segment[6]_INST_0_i_4_TMR_0 ['FDRE']---['FDRE'] segment[6]_INST_0_i_4 Port:I0
+MATCH: segment[6]_INST_0_i_4_TMR_0 []---[] segment[6]_INST_0_i_4 Port:I1
+MATCH: segment[6]_INST_0_i_4_TMR_0 []---[] segment[6]_INST_0_i_4 Port:I2
+MATCH: segment[6]_INST_0_i_4_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I3
+MATCH: segment[6]_INST_0_i_4_TMR_0 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I4
+MATCH: segment[6]_INST_0_i_4_TMR_0 []---[] segment[6]_INST_0_i_4 Port:I5
+MATCH: segment[6]_INST_0_i_4_TMR_1 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_4 Port:O
+MATCH: segment[6]_INST_0_i_4_TMR_1 ['FDRE']---['FDRE'] segment[6]_INST_0_i_4 Port:I0
+MATCH: segment[6]_INST_0_i_4_TMR_1 []---[] segment[6]_INST_0_i_4 Port:I1
+MATCH: segment[6]_INST_0_i_4_TMR_1 []---[] segment[6]_INST_0_i_4 Port:I2
+MATCH: segment[6]_INST_0_i_4_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I3
+MATCH: segment[6]_INST_0_i_4_TMR_1 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I4
+MATCH: segment[6]_INST_0_i_4_TMR_1 []---[] segment[6]_INST_0_i_4 Port:I5
+MATCH: segment[6]_INST_0_i_4_TMR_2 ['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4']---['LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4', 'LUT4'] segment[6]_INST_0_i_4 Port:O
+MATCH: segment[6]_INST_0_i_4_TMR_2 ['FDRE']---['FDRE'] segment[6]_INST_0_i_4 Port:I0
+MATCH: segment[6]_INST_0_i_4_TMR_2 []---[] segment[6]_INST_0_i_4 Port:I1
+MATCH: segment[6]_INST_0_i_4_TMR_2 []---[] segment[6]_INST_0_i_4 Port:I2
+MATCH: segment[6]_INST_0_i_4_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I3
+MATCH: segment[6]_INST_0_i_4_TMR_2 ['mod_counter__parameterized0_0']---['mod_counter__parameterized0_0'] segment[6]_INST_0_i_4 Port:I4
+MATCH: segment[6]_INST_0_i_4_TMR_2 []---[] segment[6]_INST_0_i_4 Port:I5
+MATCH: count[0]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:O
+MATCH: count[0]_i_1__0_TMR_0 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:I0
+MATCH: count[0]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:O
+MATCH: count[0]_i_1__0_TMR_1 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:I0
+MATCH: count[0]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:O
+MATCH: count[0]_i_1__0_TMR_2 ['FDRE']---['FDRE'] count[0]_i_1__0 Port:I0
+MATCH: count[1]_i_1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1 Port:O
+MATCH: count[1]_i_1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1 Port:I0
+MATCH: count[1]_i_1_TMR_0 ['FDRE']---['FDRE'] count[1]_i_1 Port:I1
+MATCH: count[1]_i_1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1 Port:O
+MATCH: count[1]_i_1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1 Port:I0
+MATCH: count[1]_i_1_TMR_1 ['FDRE']---['FDRE'] count[1]_i_1 Port:I1
+MATCH: count[1]_i_1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1 Port:O
+MATCH: count[1]_i_1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1 Port:I0
+MATCH: count[1]_i_1_TMR_2 ['FDRE']---['FDRE'] count[1]_i_1 Port:I1
+MATCH: count[2]_i_1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1 Port:O
+MATCH: count[2]_i_1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1 Port:I0
+MATCH: count[2]_i_1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1 Port:I1
+MATCH: count[2]_i_1_TMR_0 ['FDRE']---['FDRE'] count[2]_i_1 Port:I2
+MATCH: count[2]_i_1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1 Port:O
+MATCH: count[2]_i_1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1 Port:I0
+MATCH: count[2]_i_1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1 Port:I1
+MATCH: count[2]_i_1_TMR_1 ['FDRE']---['FDRE'] count[2]_i_1 Port:I2
+MATCH: count[2]_i_1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1 Port:O
+MATCH: count[2]_i_1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1 Port:I0
+MATCH: count[2]_i_1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1 Port:I1
+MATCH: count[2]_i_1_TMR_2 ['FDRE']---['FDRE'] count[2]_i_1 Port:I2
+MATCH: count[3]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1 Port:O
+MATCH: count[3]_i_1_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I0
+MATCH: count[3]_i_1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_1 Port:I1
+MATCH: count[3]_i_1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_1 Port:I2
+MATCH: count[3]_i_1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_1 Port:I3
+MATCH: count[3]_i_1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_1 Port:I4
+MATCH: count[3]_i_1_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I5
+MATCH: count[3]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1 Port:O
+MATCH: count[3]_i_1_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I0
+MATCH: count[3]_i_1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_1 Port:I1
+MATCH: count[3]_i_1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_1 Port:I2
+MATCH: count[3]_i_1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_1 Port:I3
+MATCH: count[3]_i_1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_1 Port:I4
+MATCH: count[3]_i_1_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I5
+MATCH: count[3]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count[3]_i_1 Port:O
+MATCH: count[3]_i_1_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I0
+MATCH: count[3]_i_1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_1 Port:I1
+MATCH: count[3]_i_1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_1 Port:I2
+MATCH: count[3]_i_1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_1 Port:I3
+MATCH: count[3]_i_1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_1 Port:I4
+MATCH: count[3]_i_1_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_1 Port:I5
+MATCH: count[3]_i_2__0_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:O
+MATCH: count[3]_i_2__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I0
+MATCH: count[3]_i_2__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I1
+MATCH: count[3]_i_2__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I2
+MATCH: count[3]_i_2__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I3
+MATCH: count[3]_i_2__0_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I4
+MATCH: count[3]_i_2__0_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I5
+MATCH: count[3]_i_2__0_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:O
+MATCH: count[3]_i_2__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I0
+MATCH: count[3]_i_2__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I1
+MATCH: count[3]_i_2__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I2
+MATCH: count[3]_i_2__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I3
+MATCH: count[3]_i_2__0_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I4
+MATCH: count[3]_i_2__0_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I5
+MATCH: count[3]_i_2__0_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:O
+MATCH: count[3]_i_2__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I0
+MATCH: count[3]_i_2__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I1
+MATCH: count[3]_i_2__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I2
+MATCH: count[3]_i_2__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__0 Port:I3
+MATCH: count[3]_i_2__0_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I4
+MATCH: count[3]_i_2__0_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__0 Port:I5
+MATCH: count[3]_i_2__1_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:O
+MATCH: count[3]_i_2__1_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:I0
+MATCH: count[3]_i_2__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I1
+MATCH: count[3]_i_2__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I2
+MATCH: count[3]_i_2__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I3
+MATCH: count[3]_i_2__1_TMR_0 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I4
+MATCH: count[3]_i_2__1_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:O
+MATCH: count[3]_i_2__1_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:I0
+MATCH: count[3]_i_2__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I1
+MATCH: count[3]_i_2__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I2
+MATCH: count[3]_i_2__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I3
+MATCH: count[3]_i_2__1_TMR_1 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I4
+MATCH: count[3]_i_2__1_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:O
+MATCH: count[3]_i_2__1_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_2__1 Port:I0
+MATCH: count[3]_i_2__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I1
+MATCH: count[3]_i_2__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I2
+MATCH: count[3]_i_2__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I3
+MATCH: count[3]_i_2__1_TMR_2 ['FDRE']---['FDRE'] count[3]_i_2__1 Port:I4
+MATCH: count[3]_i_3_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3 Port:O
+MATCH: count[3]_i_3_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3 Port:I0
+MATCH: count[3]_i_3_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3 Port:I1
+MATCH: count[3]_i_3_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3 Port:I2
+MATCH: count[3]_i_3_TMR_0 ['FDRE']---['FDRE'] count[3]_i_3 Port:I3
+MATCH: count[3]_i_3_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3 Port:O
+MATCH: count[3]_i_3_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3 Port:I0
+MATCH: count[3]_i_3_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3 Port:I1
+MATCH: count[3]_i_3_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3 Port:I2
+MATCH: count[3]_i_3_TMR_1 ['FDRE']---['FDRE'] count[3]_i_3 Port:I3
+MATCH: count[3]_i_3_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3 Port:O
+MATCH: count[3]_i_3_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3 Port:I0
+MATCH: count[3]_i_3_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3 Port:I1
+MATCH: count[3]_i_3_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3 Port:I2
+MATCH: count[3]_i_3_TMR_2 ['FDRE']---['FDRE'] count[3]_i_3 Port:I3
+MATCH: count[3]_i_5__0_TMR_0 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_5__0 Port:O
+MATCH: count[3]_i_5__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I0
+MATCH: count[3]_i_5__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I1
+MATCH: count[3]_i_5__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I2
+MATCH: count[3]_i_5__0_TMR_0 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I3
+MATCH: count[3]_i_5__0_TMR_1 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_5__0 Port:O
+MATCH: count[3]_i_5__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I0
+MATCH: count[3]_i_5__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I1
+MATCH: count[3]_i_5__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I2
+MATCH: count[3]_i_5__0_TMR_1 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I3
+MATCH: count[3]_i_5__0_TMR_2 ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count[3]_i_5__0 Port:O
+MATCH: count[3]_i_5__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I0
+MATCH: count[3]_i_5__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I1
+MATCH: count[3]_i_5__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I2
+MATCH: count[3]_i_5__0_TMR_2 ['FDRE']---['FDRE'] count[3]_i_5__0 Port:I3
+MATCH: count_reg_TMR_0[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_0[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_0[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_0[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_1[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_1[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_1[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_1[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_2[0] ['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT1', 'LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[0] Port:Q
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:C
+MATCH: count_reg_TMR_2[0] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[0] Port:CE
+MATCH: count_reg_TMR_2[0] ['LUT1']---['LUT1'] count_reg[0] Port:D
+MATCH: count_reg_TMR_2[0] ['LUT6']---['LUT6'] count_reg[0] Port:R
+MATCH: count_reg_TMR_0[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_0[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_0[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_0[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_1[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_1[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_1[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_1[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_2[1] ['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT2', 'LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[1] Port:Q
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:C
+MATCH: count_reg_TMR_2[1] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[1] Port:CE
+MATCH: count_reg_TMR_2[1] ['LUT2']---['LUT2'] count_reg[1] Port:D
+MATCH: count_reg_TMR_2[1] ['LUT6']---['LUT6'] count_reg[1] Port:R
+MATCH: count_reg_TMR_0[2] ['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_0[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_0[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_0[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_1[2] ['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_1[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_1[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_1[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_2[2] ['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT3', 'LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[2] Port:Q
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:C
+MATCH: count_reg_TMR_2[2] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[2] Port:CE
+MATCH: count_reg_TMR_2[2] ['LUT3']---['LUT3'] count_reg[2] Port:D
+MATCH: count_reg_TMR_2[2] ['LUT6']---['LUT6'] count_reg[2] Port:R
+MATCH: count_reg_TMR_0[3] ['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_0[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_0[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_0[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: count_reg_TMR_1[3] ['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_1[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_1[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_1[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: count_reg_TMR_2[3] ['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0']---['LUT4', 'LUT4', 'LUT5', 'LUT6', 'LUT6', 'mod_counter__parameterized0'] count_reg[3] Port:Q
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:C
+MATCH: count_reg_TMR_2[3] ['mod_counter__parameterized0']---['mod_counter__parameterized0'] count_reg[3] Port:CE
+MATCH: count_reg_TMR_2[3] ['LUT4']---['LUT4'] count_reg[3] Port:D
+MATCH: count_reg_TMR_2[3] ['LUT6']---['LUT6'] count_reg[3] Port:R
+MATCH: VCC_TMR_0 ['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] VCC Port:P
+MATCH: VCC_TMR_1 ['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] VCC Port:P
+MATCH: VCC_TMR_2 ['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE']---['CARRY4', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE', 'FDRE'] VCC Port:P
+MATCH: anode[0]_INST_0_TMR_0 ['SevenSegmentControl']---['SevenSegmentControl'] anode[0]_INST_0 Port:O
+MATCH: anode[0]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I0
+MATCH: anode[0]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I1
+NOT MATCH: anode[0]_INST_0_TMR_1 []---['SevenSegmentControl'] anode[0]_INST_0 Port:O
+MATCH: anode[0]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I0
+MATCH: anode[0]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I1
+NOT MATCH: anode[0]_INST_0_TMR_2 []---['SevenSegmentControl'] anode[0]_INST_0 Port:O
+MATCH: anode[0]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I0
+MATCH: anode[0]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[0]_INST_0 Port:I1
+MATCH: anode[1]_INST_0_TMR_0 ['SevenSegmentControl']---['SevenSegmentControl'] anode[1]_INST_0 Port:O
+MATCH: anode[1]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I0
+MATCH: anode[1]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I1
+NOT MATCH: anode[1]_INST_0_TMR_1 []---['SevenSegmentControl'] anode[1]_INST_0 Port:O
+MATCH: anode[1]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I0
+MATCH: anode[1]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I1
+NOT MATCH: anode[1]_INST_0_TMR_2 []---['SevenSegmentControl'] anode[1]_INST_0 Port:O
+MATCH: anode[1]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I0
+MATCH: anode[1]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[1]_INST_0 Port:I1
+MATCH: anode[3]_INST_0_TMR_0 ['SevenSegmentControl']---['SevenSegmentControl'] anode[3]_INST_0 Port:O
+MATCH: anode[3]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I0
+MATCH: anode[3]_INST_0_TMR_0 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I1
+NOT MATCH: anode[3]_INST_0_TMR_1 []---['SevenSegmentControl'] anode[3]_INST_0 Port:O
+MATCH: anode[3]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I0
+MATCH: anode[3]_INST_0_TMR_1 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I1
+NOT MATCH: anode[3]_INST_0_TMR_2 []---['SevenSegmentControl'] anode[3]_INST_0 Port:O
+MATCH: anode[3]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I0
+MATCH: anode[3]_INST_0_TMR_2 ['FDRE']---['FDRE'] anode[3]_INST_0 Port:I1
+MATCH: count_val[0]_i_2_TMR_0 ['CARRY4']---['CARRY4'] count_val[0]_i_2 Port:O
+MATCH: count_val[0]_i_2_TMR_0 ['FDRE']---['FDRE'] count_val[0]_i_2 Port:I0
+MATCH: count_val[0]_i_2_TMR_1 ['CARRY4']---['CARRY4'] count_val[0]_i_2 Port:O
+MATCH: count_val[0]_i_2_TMR_1 ['FDRE']---['FDRE'] count_val[0]_i_2 Port:I0
+MATCH: count_val[0]_i_2_TMR_2 ['CARRY4']---['CARRY4'] count_val[0]_i_2 Port:O
+MATCH: count_val[0]_i_2_TMR_2 ['FDRE']---['FDRE'] count_val[0]_i_2 Port:I0
+MATCH: count_val_reg_TMR_0[0] ['LUT1']---['LUT1'] count_val_reg[0] Port:Q
+MATCH: count_val_reg_TMR_0[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:C
+MATCH: count_val_reg_TMR_0[0] ['VCC']---['VCC'] count_val_reg[0] Port:CE
+MATCH: count_val_reg_TMR_0[0] ['CARRY4']---['CARRY4'] count_val_reg[0] Port:D
+MATCH: count_val_reg_TMR_0[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:R
+MATCH: count_val_reg_TMR_1[0] ['LUT1']---['LUT1'] count_val_reg[0] Port:Q
+MATCH: count_val_reg_TMR_1[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:C
+MATCH: count_val_reg_TMR_1[0] ['VCC']---['VCC'] count_val_reg[0] Port:CE
+MATCH: count_val_reg_TMR_1[0] ['CARRY4']---['CARRY4'] count_val_reg[0] Port:D
+MATCH: count_val_reg_TMR_1[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:R
+MATCH: count_val_reg_TMR_2[0] ['LUT1']---['LUT1'] count_val_reg[0] Port:Q
+MATCH: count_val_reg_TMR_2[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:C
+MATCH: count_val_reg_TMR_2[0] ['VCC']---['VCC'] count_val_reg[0] Port:CE
+MATCH: count_val_reg_TMR_2[0] ['CARRY4']---['CARRY4'] count_val_reg[0] Port:D
+MATCH: count_val_reg_TMR_2[0] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[0] Port:R
+MATCH: count_val_reg[0]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CI
+MATCH: count_val_reg[0]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CYINIT
+MATCH: count_val_reg[0]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[0]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[0]_i_1 Port:O[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_0 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_val_reg[0]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_0 ['LUT1']---['LUT1'] count_val_reg[0]_i_1 Port:S[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CI
+MATCH: count_val_reg[0]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CYINIT
+MATCH: count_val_reg[0]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[0]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[0]_i_1 Port:O[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_1 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_val_reg[0]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_1 ['LUT1']---['LUT1'] count_val_reg[0]_i_1 Port:S[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CI
+MATCH: count_val_reg[0]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[0]_i_1 Port:CYINIT
+MATCH: count_val_reg[0]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[0]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[0]_i_1 Port:O[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_2 ['VCC', 'GND', 'GND', 'GND']---['VCC', 'GND', 'GND', 'GND'] count_val_reg[0]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[0]_i_1_TMR_2 ['LUT1']---['LUT1'] count_val_reg[0]_i_1 Port:S[3:0]
+MATCH: count_val_reg_TMR_0[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:Q
+MATCH: count_val_reg_TMR_0[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:C
+MATCH: count_val_reg_TMR_0[10] ['VCC']---['VCC'] count_val_reg[10] Port:CE
+MATCH: count_val_reg_TMR_0[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:D
+MATCH: count_val_reg_TMR_0[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:R
+MATCH: count_val_reg_TMR_1[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:Q
+MATCH: count_val_reg_TMR_1[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:C
+MATCH: count_val_reg_TMR_1[10] ['VCC']---['VCC'] count_val_reg[10] Port:CE
+MATCH: count_val_reg_TMR_1[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:D
+MATCH: count_val_reg_TMR_1[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:R
+MATCH: count_val_reg_TMR_2[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:Q
+MATCH: count_val_reg_TMR_2[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:C
+MATCH: count_val_reg_TMR_2[10] ['VCC']---['VCC'] count_val_reg[10] Port:CE
+MATCH: count_val_reg_TMR_2[10] ['CARRY4']---['CARRY4'] count_val_reg[10] Port:D
+MATCH: count_val_reg_TMR_2[10] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[10] Port:R
+MATCH: count_val_reg_TMR_0[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:Q
+MATCH: count_val_reg_TMR_0[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:C
+MATCH: count_val_reg_TMR_0[11] ['VCC']---['VCC'] count_val_reg[11] Port:CE
+MATCH: count_val_reg_TMR_0[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:D
+MATCH: count_val_reg_TMR_0[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:R
+MATCH: count_val_reg_TMR_1[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:Q
+MATCH: count_val_reg_TMR_1[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:C
+MATCH: count_val_reg_TMR_1[11] ['VCC']---['VCC'] count_val_reg[11] Port:CE
+MATCH: count_val_reg_TMR_1[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:D
+MATCH: count_val_reg_TMR_1[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:R
+MATCH: count_val_reg_TMR_2[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:Q
+MATCH: count_val_reg_TMR_2[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:C
+MATCH: count_val_reg_TMR_2[11] ['VCC']---['VCC'] count_val_reg[11] Port:CE
+MATCH: count_val_reg_TMR_2[11] ['CARRY4']---['CARRY4'] count_val_reg[11] Port:D
+MATCH: count_val_reg_TMR_2[11] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[11] Port:R
+MATCH: count_val_reg_TMR_0[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:Q
+MATCH: count_val_reg_TMR_0[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:C
+MATCH: count_val_reg_TMR_0[12] ['VCC']---['VCC'] count_val_reg[12] Port:CE
+MATCH: count_val_reg_TMR_0[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:D
+MATCH: count_val_reg_TMR_0[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:R
+MATCH: count_val_reg_TMR_1[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:Q
+MATCH: count_val_reg_TMR_1[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:C
+MATCH: count_val_reg_TMR_1[12] ['VCC']---['VCC'] count_val_reg[12] Port:CE
+MATCH: count_val_reg_TMR_1[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:D
+MATCH: count_val_reg_TMR_1[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:R
+MATCH: count_val_reg_TMR_2[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:Q
+MATCH: count_val_reg_TMR_2[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:C
+MATCH: count_val_reg_TMR_2[12] ['VCC']---['VCC'] count_val_reg[12] Port:CE
+MATCH: count_val_reg_TMR_2[12] ['CARRY4']---['CARRY4'] count_val_reg[12] Port:D
+MATCH: count_val_reg_TMR_2[12] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[12] Port:R
+MATCH: count_val_reg[12]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CI
+MATCH: count_val_reg[12]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[12]_i_1 Port:CYINIT
+MATCH: count_val_reg[12]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:O[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:S[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CI
+MATCH: count_val_reg[12]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[12]_i_1 Port:CYINIT
+MATCH: count_val_reg[12]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:O[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:S[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CI
+MATCH: count_val_reg[12]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[12]_i_1 Port:CYINIT
+MATCH: count_val_reg[12]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[12]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:O[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[12]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[12]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[12]_i_1 Port:S[3:0]
+MATCH: count_val_reg_TMR_0[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:Q
+MATCH: count_val_reg_TMR_0[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:C
+MATCH: count_val_reg_TMR_0[13] ['VCC']---['VCC'] count_val_reg[13] Port:CE
+MATCH: count_val_reg_TMR_0[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:D
+MATCH: count_val_reg_TMR_0[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:R
+MATCH: count_val_reg_TMR_1[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:Q
+MATCH: count_val_reg_TMR_1[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:C
+MATCH: count_val_reg_TMR_1[13] ['VCC']---['VCC'] count_val_reg[13] Port:CE
+MATCH: count_val_reg_TMR_1[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:D
+MATCH: count_val_reg_TMR_1[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:R
+MATCH: count_val_reg_TMR_2[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:Q
+MATCH: count_val_reg_TMR_2[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:C
+MATCH: count_val_reg_TMR_2[13] ['VCC']---['VCC'] count_val_reg[13] Port:CE
+MATCH: count_val_reg_TMR_2[13] ['CARRY4']---['CARRY4'] count_val_reg[13] Port:D
+MATCH: count_val_reg_TMR_2[13] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[13] Port:R
+MATCH: count_val_reg_TMR_0[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:Q
+MATCH: count_val_reg_TMR_0[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:C
+MATCH: count_val_reg_TMR_0[14] ['VCC']---['VCC'] count_val_reg[14] Port:CE
+MATCH: count_val_reg_TMR_0[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:D
+MATCH: count_val_reg_TMR_0[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:R
+MATCH: count_val_reg_TMR_1[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:Q
+MATCH: count_val_reg_TMR_1[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:C
+MATCH: count_val_reg_TMR_1[14] ['VCC']---['VCC'] count_val_reg[14] Port:CE
+MATCH: count_val_reg_TMR_1[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:D
+MATCH: count_val_reg_TMR_1[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:R
+MATCH: count_val_reg_TMR_2[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:Q
+MATCH: count_val_reg_TMR_2[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:C
+MATCH: count_val_reg_TMR_2[14] ['VCC']---['VCC'] count_val_reg[14] Port:CE
+MATCH: count_val_reg_TMR_2[14] ['CARRY4']---['CARRY4'] count_val_reg[14] Port:D
+MATCH: count_val_reg_TMR_2[14] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[14] Port:R
+MATCH: count_val_reg_TMR_0[15] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[15] Port:Q
+MATCH: count_val_reg_TMR_0[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:C
+MATCH: count_val_reg_TMR_0[15] ['VCC']---['VCC'] count_val_reg[15] Port:CE
+MATCH: count_val_reg_TMR_0[15] ['CARRY4']---['CARRY4'] count_val_reg[15] Port:D
+MATCH: count_val_reg_TMR_0[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:R
+MATCH: count_val_reg_TMR_1[15] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[15] Port:Q
+MATCH: count_val_reg_TMR_1[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:C
+MATCH: count_val_reg_TMR_1[15] ['VCC']---['VCC'] count_val_reg[15] Port:CE
+MATCH: count_val_reg_TMR_1[15] ['CARRY4']---['CARRY4'] count_val_reg[15] Port:D
+MATCH: count_val_reg_TMR_1[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:R
+MATCH: count_val_reg_TMR_2[15] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[15] Port:Q
+MATCH: count_val_reg_TMR_2[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:C
+MATCH: count_val_reg_TMR_2[15] ['VCC']---['VCC'] count_val_reg[15] Port:CE
+MATCH: count_val_reg_TMR_2[15] ['CARRY4']---['CARRY4'] count_val_reg[15] Port:D
+MATCH: count_val_reg_TMR_2[15] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[15] Port:R
+MATCH: count_val_reg_TMR_0[16] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[16] Port:Q
+MATCH: count_val_reg_TMR_0[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:C
+MATCH: count_val_reg_TMR_0[16] ['VCC']---['VCC'] count_val_reg[16] Port:CE
+MATCH: count_val_reg_TMR_0[16] ['CARRY4']---['CARRY4'] count_val_reg[16] Port:D
+MATCH: count_val_reg_TMR_0[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:R
+MATCH: count_val_reg_TMR_1[16] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[16] Port:Q
+MATCH: count_val_reg_TMR_1[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:C
+MATCH: count_val_reg_TMR_1[16] ['VCC']---['VCC'] count_val_reg[16] Port:CE
+MATCH: count_val_reg_TMR_1[16] ['CARRY4']---['CARRY4'] count_val_reg[16] Port:D
+MATCH: count_val_reg_TMR_1[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:R
+MATCH: count_val_reg_TMR_2[16] ['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl']---['CARRY4', 'LUT2', 'LUT2', 'LUT2', 'LUT2', 'SevenSegmentControl'] count_val_reg[16] Port:Q
+MATCH: count_val_reg_TMR_2[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:C
+MATCH: count_val_reg_TMR_2[16] ['VCC']---['VCC'] count_val_reg[16] Port:CE
+MATCH: count_val_reg_TMR_2[16] ['CARRY4']---['CARRY4'] count_val_reg[16] Port:D
+MATCH: count_val_reg_TMR_2[16] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[16] Port:R
+MATCH: count_val_reg[16]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[16]_i_1 Port:CI
+MATCH: count_val_reg[16]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[16]_i_1 Port:CYINIT
+MATCH: count_val_reg[16]_i_1_TMR_0 []---[] count_val_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_0 ['FDRE']---['FDRE'] count_val_reg[16]_i_1 Port:O[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_0 ['FDRE', 'GND', 'GND', 'GND']---['FDRE', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:S[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[16]_i_1 Port:CI
+MATCH: count_val_reg[16]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[16]_i_1 Port:CYINIT
+MATCH: count_val_reg[16]_i_1_TMR_1 []---[] count_val_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_1 ['FDRE']---['FDRE'] count_val_reg[16]_i_1 Port:O[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_1 ['FDRE', 'GND', 'GND', 'GND']---['FDRE', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:S[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[16]_i_1 Port:CI
+MATCH: count_val_reg[16]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[16]_i_1 Port:CYINIT
+MATCH: count_val_reg[16]_i_1_TMR_2 []---[] count_val_reg[16]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_2 ['FDRE']---['FDRE'] count_val_reg[16]_i_1 Port:O[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[16]_i_1_TMR_2 ['FDRE', 'GND', 'GND', 'GND']---['FDRE', 'GND', 'GND', 'GND'] count_val_reg[16]_i_1 Port:S[3:0]
+MATCH: count_val_reg_TMR_0[1] []---[] count_val_reg[1] Port:Q
+MATCH: count_val_reg_TMR_0[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:C
+MATCH: count_val_reg_TMR_0[1] ['VCC']---['VCC'] count_val_reg[1] Port:CE
+MATCH: count_val_reg_TMR_0[1] ['CARRY4']---['CARRY4'] count_val_reg[1] Port:D
+MATCH: count_val_reg_TMR_0[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:R
+MATCH: count_val_reg_TMR_1[1] []---[] count_val_reg[1] Port:Q
+MATCH: count_val_reg_TMR_1[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:C
+MATCH: count_val_reg_TMR_1[1] ['VCC']---['VCC'] count_val_reg[1] Port:CE
+MATCH: count_val_reg_TMR_1[1] ['CARRY4']---['CARRY4'] count_val_reg[1] Port:D
+MATCH: count_val_reg_TMR_1[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:R
+MATCH: count_val_reg_TMR_2[1] []---[] count_val_reg[1] Port:Q
+MATCH: count_val_reg_TMR_2[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:C
+MATCH: count_val_reg_TMR_2[1] ['VCC']---['VCC'] count_val_reg[1] Port:CE
+MATCH: count_val_reg_TMR_2[1] ['CARRY4']---['CARRY4'] count_val_reg[1] Port:D
+MATCH: count_val_reg_TMR_2[1] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[1] Port:R
+MATCH: count_val_reg_TMR_0[2] []---[] count_val_reg[2] Port:Q
+MATCH: count_val_reg_TMR_0[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:C
+MATCH: count_val_reg_TMR_0[2] ['VCC']---['VCC'] count_val_reg[2] Port:CE
+MATCH: count_val_reg_TMR_0[2] ['CARRY4']---['CARRY4'] count_val_reg[2] Port:D
+MATCH: count_val_reg_TMR_0[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:R
+MATCH: count_val_reg_TMR_1[2] []---[] count_val_reg[2] Port:Q
+MATCH: count_val_reg_TMR_1[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:C
+MATCH: count_val_reg_TMR_1[2] ['VCC']---['VCC'] count_val_reg[2] Port:CE
+MATCH: count_val_reg_TMR_1[2] ['CARRY4']---['CARRY4'] count_val_reg[2] Port:D
+MATCH: count_val_reg_TMR_1[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:R
+MATCH: count_val_reg_TMR_2[2] []---[] count_val_reg[2] Port:Q
+MATCH: count_val_reg_TMR_2[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:C
+MATCH: count_val_reg_TMR_2[2] ['VCC']---['VCC'] count_val_reg[2] Port:CE
+MATCH: count_val_reg_TMR_2[2] ['CARRY4']---['CARRY4'] count_val_reg[2] Port:D
+MATCH: count_val_reg_TMR_2[2] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[2] Port:R
+MATCH: count_val_reg_TMR_0[3] []---[] count_val_reg[3] Port:Q
+MATCH: count_val_reg_TMR_0[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:C
+MATCH: count_val_reg_TMR_0[3] ['VCC']---['VCC'] count_val_reg[3] Port:CE
+MATCH: count_val_reg_TMR_0[3] ['CARRY4']---['CARRY4'] count_val_reg[3] Port:D
+MATCH: count_val_reg_TMR_0[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:R
+MATCH: count_val_reg_TMR_1[3] []---[] count_val_reg[3] Port:Q
+MATCH: count_val_reg_TMR_1[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:C
+MATCH: count_val_reg_TMR_1[3] ['VCC']---['VCC'] count_val_reg[3] Port:CE
+MATCH: count_val_reg_TMR_1[3] ['CARRY4']---['CARRY4'] count_val_reg[3] Port:D
+MATCH: count_val_reg_TMR_1[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:R
+MATCH: count_val_reg_TMR_2[3] []---[] count_val_reg[3] Port:Q
+MATCH: count_val_reg_TMR_2[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:C
+MATCH: count_val_reg_TMR_2[3] ['VCC']---['VCC'] count_val_reg[3] Port:CE
+MATCH: count_val_reg_TMR_2[3] ['CARRY4']---['CARRY4'] count_val_reg[3] Port:D
+MATCH: count_val_reg_TMR_2[3] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[3] Port:R
+MATCH: count_val_reg_TMR_0[4] []---[] count_val_reg[4] Port:Q
+MATCH: count_val_reg_TMR_0[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:C
+MATCH: count_val_reg_TMR_0[4] ['VCC']---['VCC'] count_val_reg[4] Port:CE
+MATCH: count_val_reg_TMR_0[4] ['CARRY4']---['CARRY4'] count_val_reg[4] Port:D
+MATCH: count_val_reg_TMR_0[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:R
+MATCH: count_val_reg_TMR_1[4] []---[] count_val_reg[4] Port:Q
+MATCH: count_val_reg_TMR_1[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:C
+MATCH: count_val_reg_TMR_1[4] ['VCC']---['VCC'] count_val_reg[4] Port:CE
+MATCH: count_val_reg_TMR_1[4] ['CARRY4']---['CARRY4'] count_val_reg[4] Port:D
+MATCH: count_val_reg_TMR_1[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:R
+MATCH: count_val_reg_TMR_2[4] []---[] count_val_reg[4] Port:Q
+MATCH: count_val_reg_TMR_2[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:C
+MATCH: count_val_reg_TMR_2[4] ['VCC']---['VCC'] count_val_reg[4] Port:CE
+MATCH: count_val_reg_TMR_2[4] ['CARRY4']---['CARRY4'] count_val_reg[4] Port:D
+MATCH: count_val_reg_TMR_2[4] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[4] Port:R
+MATCH: count_val_reg[4]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CI
+MATCH: count_val_reg[4]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[4]_i_1 Port:CYINIT
+MATCH: count_val_reg[4]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[4]_i_1 Port:O[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_0 []---[] count_val_reg[4]_i_1 Port:S[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CI
+MATCH: count_val_reg[4]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[4]_i_1 Port:CYINIT
+MATCH: count_val_reg[4]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[4]_i_1 Port:O[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_1 []---[] count_val_reg[4]_i_1 Port:S[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CI
+MATCH: count_val_reg[4]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[4]_i_1 Port:CYINIT
+MATCH: count_val_reg[4]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[4]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[4]_i_1 Port:O[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[4]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[4]_i_1_TMR_2 []---[] count_val_reg[4]_i_1 Port:S[3:0]
+MATCH: count_val_reg_TMR_0[5] []---[] count_val_reg[5] Port:Q
+MATCH: count_val_reg_TMR_0[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:C
+MATCH: count_val_reg_TMR_0[5] ['VCC']---['VCC'] count_val_reg[5] Port:CE
+MATCH: count_val_reg_TMR_0[5] ['CARRY4']---['CARRY4'] count_val_reg[5] Port:D
+MATCH: count_val_reg_TMR_0[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:R
+MATCH: count_val_reg_TMR_1[5] []---[] count_val_reg[5] Port:Q
+MATCH: count_val_reg_TMR_1[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:C
+MATCH: count_val_reg_TMR_1[5] ['VCC']---['VCC'] count_val_reg[5] Port:CE
+MATCH: count_val_reg_TMR_1[5] ['CARRY4']---['CARRY4'] count_val_reg[5] Port:D
+MATCH: count_val_reg_TMR_1[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:R
+MATCH: count_val_reg_TMR_2[5] []---[] count_val_reg[5] Port:Q
+MATCH: count_val_reg_TMR_2[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:C
+MATCH: count_val_reg_TMR_2[5] ['VCC']---['VCC'] count_val_reg[5] Port:CE
+MATCH: count_val_reg_TMR_2[5] ['CARRY4']---['CARRY4'] count_val_reg[5] Port:D
+MATCH: count_val_reg_TMR_2[5] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[5] Port:R
+MATCH: count_val_reg_TMR_0[6] []---[] count_val_reg[6] Port:Q
+MATCH: count_val_reg_TMR_0[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:C
+MATCH: count_val_reg_TMR_0[6] ['VCC']---['VCC'] count_val_reg[6] Port:CE
+MATCH: count_val_reg_TMR_0[6] ['CARRY4']---['CARRY4'] count_val_reg[6] Port:D
+MATCH: count_val_reg_TMR_0[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:R
+MATCH: count_val_reg_TMR_1[6] []---[] count_val_reg[6] Port:Q
+MATCH: count_val_reg_TMR_1[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:C
+MATCH: count_val_reg_TMR_1[6] ['VCC']---['VCC'] count_val_reg[6] Port:CE
+MATCH: count_val_reg_TMR_1[6] ['CARRY4']---['CARRY4'] count_val_reg[6] Port:D
+MATCH: count_val_reg_TMR_1[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:R
+MATCH: count_val_reg_TMR_2[6] []---[] count_val_reg[6] Port:Q
+MATCH: count_val_reg_TMR_2[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:C
+MATCH: count_val_reg_TMR_2[6] ['VCC']---['VCC'] count_val_reg[6] Port:CE
+MATCH: count_val_reg_TMR_2[6] ['CARRY4']---['CARRY4'] count_val_reg[6] Port:D
+MATCH: count_val_reg_TMR_2[6] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[6] Port:R
+MATCH: count_val_reg_TMR_0[7] []---[] count_val_reg[7] Port:Q
+MATCH: count_val_reg_TMR_0[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:C
+MATCH: count_val_reg_TMR_0[7] ['VCC']---['VCC'] count_val_reg[7] Port:CE
+MATCH: count_val_reg_TMR_0[7] ['CARRY4']---['CARRY4'] count_val_reg[7] Port:D
+MATCH: count_val_reg_TMR_0[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:R
+MATCH: count_val_reg_TMR_1[7] []---[] count_val_reg[7] Port:Q
+MATCH: count_val_reg_TMR_1[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:C
+MATCH: count_val_reg_TMR_1[7] ['VCC']---['VCC'] count_val_reg[7] Port:CE
+MATCH: count_val_reg_TMR_1[7] ['CARRY4']---['CARRY4'] count_val_reg[7] Port:D
+MATCH: count_val_reg_TMR_1[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:R
+MATCH: count_val_reg_TMR_2[7] []---[] count_val_reg[7] Port:Q
+MATCH: count_val_reg_TMR_2[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:C
+MATCH: count_val_reg_TMR_2[7] ['VCC']---['VCC'] count_val_reg[7] Port:CE
+MATCH: count_val_reg_TMR_2[7] ['CARRY4']---['CARRY4'] count_val_reg[7] Port:D
+MATCH: count_val_reg_TMR_2[7] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[7] Port:R
+MATCH: count_val_reg_TMR_0[8] []---[] count_val_reg[8] Port:Q
+MATCH: count_val_reg_TMR_0[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:C
+MATCH: count_val_reg_TMR_0[8] ['VCC']---['VCC'] count_val_reg[8] Port:CE
+MATCH: count_val_reg_TMR_0[8] ['CARRY4']---['CARRY4'] count_val_reg[8] Port:D
+MATCH: count_val_reg_TMR_0[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:R
+MATCH: count_val_reg_TMR_1[8] []---[] count_val_reg[8] Port:Q
+MATCH: count_val_reg_TMR_1[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:C
+MATCH: count_val_reg_TMR_1[8] ['VCC']---['VCC'] count_val_reg[8] Port:CE
+MATCH: count_val_reg_TMR_1[8] ['CARRY4']---['CARRY4'] count_val_reg[8] Port:D
+MATCH: count_val_reg_TMR_1[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:R
+MATCH: count_val_reg_TMR_2[8] []---[] count_val_reg[8] Port:Q
+MATCH: count_val_reg_TMR_2[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:C
+MATCH: count_val_reg_TMR_2[8] ['VCC']---['VCC'] count_val_reg[8] Port:CE
+MATCH: count_val_reg_TMR_2[8] ['CARRY4']---['CARRY4'] count_val_reg[8] Port:D
+MATCH: count_val_reg_TMR_2[8] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[8] Port:R
+MATCH: count_val_reg[8]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CI
+MATCH: count_val_reg[8]_i_1_TMR_0 ['GND']---['GND'] count_val_reg[8]_i_1 Port:CYINIT
+MATCH: count_val_reg[8]_i_1_TMR_0 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_0 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:O[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_0 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_0 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:S[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CI
+MATCH: count_val_reg[8]_i_1_TMR_1 ['GND']---['GND'] count_val_reg[8]_i_1 Port:CYINIT
+MATCH: count_val_reg[8]_i_1_TMR_1 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_1 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:O[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_1 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_1 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:S[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CI
+MATCH: count_val_reg[8]_i_1_TMR_2 ['GND']---['GND'] count_val_reg[8]_i_1 Port:CYINIT
+MATCH: count_val_reg[8]_i_1_TMR_2 ['CARRY4']---['CARRY4'] count_val_reg[8]_i_1 Port:CO[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_2 ['FDRE', 'FDRE', 'FDRE', 'FDRE']---['FDRE', 'FDRE', 'FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:O[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_2 ['GND', 'GND', 'GND', 'GND']---['GND', 'GND', 'GND', 'GND'] count_val_reg[8]_i_1 Port:DI[3:0]
+MATCH: count_val_reg[8]_i_1_TMR_2 ['FDRE', 'FDRE']---['FDRE', 'FDRE'] count_val_reg[8]_i_1 Port:S[3:0]
+MATCH: count_val_reg_TMR_0[9] []---[] count_val_reg[9] Port:Q
+MATCH: count_val_reg_TMR_0[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:C
+MATCH: count_val_reg_TMR_0[9] ['VCC']---['VCC'] count_val_reg[9] Port:CE
+MATCH: count_val_reg_TMR_0[9] ['CARRY4']---['CARRY4'] count_val_reg[9] Port:D
+MATCH: count_val_reg_TMR_0[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:R
+MATCH: count_val_reg_TMR_1[9] []---[] count_val_reg[9] Port:Q
+MATCH: count_val_reg_TMR_1[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:C
+MATCH: count_val_reg_TMR_1[9] ['VCC']---['VCC'] count_val_reg[9] Port:CE
+MATCH: count_val_reg_TMR_1[9] ['CARRY4']---['CARRY4'] count_val_reg[9] Port:D
+MATCH: count_val_reg_TMR_1[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:R
+MATCH: count_val_reg_TMR_2[9] []---[] count_val_reg[9] Port:Q
+MATCH: count_val_reg_TMR_2[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:C
+MATCH: count_val_reg_TMR_2[9] ['VCC']---['VCC'] count_val_reg[9] Port:CE
+MATCH: count_val_reg_TMR_2[9] ['CARRY4']---['CARRY4'] count_val_reg[9] Port:D
+MATCH: count_val_reg_TMR_2[9] ['SevenSegmentControl']---['SevenSegmentControl'] count_val_reg[9] Port:R
+MATCH: segment[7]_INST_0_TMR_0 ['SevenSegmentControl']---['SevenSegmentControl'] segment[7]_INST_0 Port:O
+MATCH: segment[7]_INST_0_TMR_0 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I0
+MATCH: segment[7]_INST_0_TMR_0 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I1
+NOT MATCH: segment[7]_INST_0_TMR_1 []---['SevenSegmentControl'] segment[7]_INST_0 Port:O
+MATCH: segment[7]_INST_0_TMR_1 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I0
+MATCH: segment[7]_INST_0_TMR_1 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I1
+NOT MATCH: segment[7]_INST_0_TMR_2 []---['SevenSegmentControl'] segment[7]_INST_0 Port:O
+MATCH: segment[7]_INST_0_TMR_2 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I0
+MATCH: segment[7]_INST_0_TMR_2 ['FDRE']---['FDRE'] segment[7]_INST_0 Port:I1
