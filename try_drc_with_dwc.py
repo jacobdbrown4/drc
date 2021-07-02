@@ -37,15 +37,16 @@ def run():
     examples_list.remove("Readme")
     examples_list.remove("unique_challenge")
     examples_list.remove("hierarchical_luts")
+    examples_list.remove("unique_different_modules")
 
 
     results = []
     for example in examples_list:
         print('\n',example)
-        current_dict = {"name": example,"just_tmr":"x","with_voters":"x","unique":"x"}
+        current_dict = {"name": example,"just_dwc":"x","with_detectors":"x","unique":"x"}
         get_modified_netlists(example)
-        current_dict.update(just_tmr= check_design(sdn.parse(example+".edf"),sdn.parse(example+"_just_dwc.edf"),"DWC","DETECTOR"))
-        current_dict.update(with_voters = check_design(sdn.parse(example+".edf"),sdn.parse(example+"_modified.edf"),"DWC","DETECTOR"))
+        current_dict.update(just_dwc= check_design(sdn.parse(example+".edf"),sdn.parse(example+"_just_dwc.edf"),"DWC","DETECTOR"))
+        current_dict.update(with_detectors = check_design(sdn.parse(example+".edf"),sdn.parse(example+"_modified.edf"),"DWC","DETECTOR"))
         results.append(current_dict)
         if 'unique_different_modules' in example:
             None
@@ -56,21 +57,31 @@ def run():
 
     dwc_success = 0
     dwc_failed = 0
-    voter_success =0
-    voter_failed = 0
+    detector_success =0
+    detector_failed = 0
     for item in results:
-        if (item["just_tmr"]):
+        if (item["just_dwc"]):
             dwc_success += 1
         else:
             dwc_failed += 1
-        if (item["with_voters"]):
-            voter_success += 1
+        if (item["with_detectors"]):
+            detector_success += 1
         else:
-            voter_failed += 1
+            detector_failed += 1
     
     print("TMR TEST:\n\tPassed:",dwc_success,", Failed: ",dwc_failed)
-    print("VOTER TEST:\n\tPassed:",voter_success,", Failed: ",voter_failed)
-    if voter_failed or dwc_failed:
+    print("DETECTOR TEST:\n\tPassed:",detector_success,", Failed: ",detector_failed)
+
+    print('Remove generated text files? y/n')
+    n = input()
+    if n is 'y':
+        dir = "."
+        files = os.listdir(dir)
+        for file in files:
+            if file.endswith(".txt") and file.find("connections_") is not -1:
+                os.remove(os.path.join(dir,file))
+
+    if detector_failed or dwc_failed:
         return False
     else:
         return True

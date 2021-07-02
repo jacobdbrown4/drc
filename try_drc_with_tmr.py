@@ -49,7 +49,7 @@ def run():
         print('\n',example)
         current_dict = {"name": example,"just_tmr":"x","with_voters":"x","unique":"x"}
         get_modified_netlists(example)
-        current_dict.update(just_tmr= check_design(sdn.parse(example+".edf"),sdn.parse(example+"_just_tmr.edf"),"TMR","VOTER"))
+        #current_dict.update(just_tmr= check_design(sdn.parse(example+".edf"),sdn.parse(example+"_just_tmr.edf"),"TMR","VOTER"))
         current_dict.update(with_voters = check_design(sdn.parse(example+".edf"),sdn.parse(example+"_modified.edf"),"TMR","VOTER"))
         results.append(current_dict)
         if 'register_file' in example:
@@ -72,9 +72,19 @@ def run():
             voter_success += 1
         else:
             voter_failed += 1
-    
+
     print("TMR TEST:\n\tPassed:",tmr_success,", Failed: ",tmr_failed)
-    print("DETECTOR TEST:\n\tPassed:",voter_success,", Failed: ",voter_failed)
+    print("VOTER TEST:\n\tPassed:",voter_success,", Failed: ",voter_failed)
+
+    print('Remove generated text files? y/n')
+    n = input()
+    if n is 'y':
+        dir = "."
+        files = os.listdir(dir)
+        for file in files:
+            if file.endswith(".txt") and file.find("connections_") is not -1:
+                os.remove(os.path.join(dir,file))
+
     if voter_failed or tmr_failed:
         return False
     else:

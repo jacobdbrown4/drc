@@ -1,4 +1,5 @@
 import spydrnet as sdn
+from spydrnet.uniquify import uniquify
 
 def compare_properties(original_netlist,modified_netlist,suffix,organ_name = 'None'):
     '''
@@ -12,10 +13,10 @@ def compare_properties(original_netlist,modified_netlist,suffix,organ_name = 'No
 
     Note: to see the results of the comparison, uncomment the appropriate lines.
     '''
-
+    uniquify(original_netlist)
     original = list(instance for instance in original_netlist.get_instances())
     modified = list(instance for instance in modified_netlist.get_instances(filter = lambda x: (organ_name not in x.name and 'GND' not in x.name and 'COMPLEX' not in x.name) is True))
-    # f = open("connections_"+original_netlist.name+".txt",'w')
+    # f = open("properties_"+original_netlist.name+".txt",'w')
     not_matched = []
     for instance_modified in modified:
         modified_name_prefix = None
@@ -47,7 +48,7 @@ def compare_properties(original_netlist,modified_netlist,suffix,organ_name = 'No
                         # f.write("\n\tNo Properties to Compare")
                     break
         if not matched_for_compare:
-            # f.write('\n'+instance_modified.name+' did not have anyone to compare to')
+            # f.write('\n'+instance_modified.name+' did not have anyone to compare to'+' from parent '+instance_modified.parent.name)
             not_matched.append(instance_modified)
     
     if not_matched:
