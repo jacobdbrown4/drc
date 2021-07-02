@@ -1,0 +1,16 @@
+register_file will not pass the check because of the replicated cables
+
+Codebreaker fully replicated has examples of possible bugs...several bugs
+    plaintext_is_ascii ones are disconnected
+    j_calc0_i_TMR_1 and 2 are partially driven by TMR_0's stuff
+    data_out_b_reg_TMR_1 and 2 are not connected. No voters. But the non_leaf port is not replicated (probably because it's also disconnected?) so ignore?
+    AND MORE....
+
+stopwatch_no_buf
+    - passed full
+    - failed partial (segment and anodes were not connected. Segment port wasn't replicated and there were no voters inserted).
+        Probably because what goes into segment and anode is voted on (and they're just LUT's) so we don't need voters?
+
+debounce_no_buf
+    - passed full
+    - failed partial because of VCC
