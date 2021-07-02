@@ -44,10 +44,21 @@ def filter_instances(instance,organ_name):
     else:
         return True
 
+def fix_instance_connection_name(current_instance,suffix):
+    modified_name_prefix = None
+    start_index = current_instance.name.find(suffix)
+    stop_index = start_index + len(suffix) + 2
+    if start_index is -1:
+        modified_name_prefix = current_instance.name
+    elif stop_index is -1:
+        modified_name_prefix = current_instance.name[:start_index-1]
+    else :
+        modified_name_prefix = current_instance.name[:start_index-1] + current_instance.name[stop_index:]
+    return modified_name_prefix
+
 def get_pin_connections(instance_list,organ_name,suffix):
     for instance in instance_list:
         start_index = instance.name.find(suffix)
-        # stop_index = start_index+5
         stop_index = start_index + len(suffix) + 2
         if start_index is -1:
                 key = ''
@@ -57,16 +68,13 @@ def get_pin_connections(instance_list,organ_name,suffix):
             if pin.wire:
                 if pin.inner_pin.port.direction is sdn.OUT:
                     pins = set(x.instance for x in get_next_instances(pin,organ_name,key,suffix))
-                    pin_num = sorted(list(x.reference.name for x in pins))
-                    # pin_num = len(pins)
+                    pin_num = sorted(list(fix_instance_connection_name(x,suffix) for x in pins))
                 elif pin.inner_pin.port.direction is sdn.IN:
                     pins = get_previous_instance(pin,organ_name,key,suffix)
                     if pins[0] is None:
-                        # pin_num = 0
                         pin_num = []
                     else:
-                        # pin_num = len(pins)
-                        pin_num = sorted(list(x.instance.reference.name for x in pins))
+                        pin_num = sorted(list(fix_instance_connection_name(x.instance,suffix) for x in pins))
             
                 if pin.inner_pin.port.name in instance._data:
                     instance[pin.inner_pin.port.name] = instance[pin.inner_pin.port.name]+ pin_num
@@ -74,7 +82,6 @@ def get_pin_connections(instance_list,organ_name,suffix):
                     instance[pin.inner_pin.port.name] = pin_num
             else:
                 if not pin.inner_pin.port.name in instance._data:
-                    # instance[pin.inner_pin.port.name] = 0
                     instance[pin.inner_pin.port.name] = []
 
 
@@ -195,8 +202,8 @@ def compare_pin_connections(original,modified,suffix,name):
 
 
 
-# netlist = sdn.parse('hierarchical_luts.edf')
-# netlist2 = sdn.parse('hierarchical_luts_modified.edf')
+# netlist = sdn.parse('stopwatch_no_buf.edf')
+# netlist2 = sdn.parse('stopwatch_no_buf_modified.edf')
 
 # print(check_by_pin_connections(netlist,netlist2,'TMR','VOTER'))
 
