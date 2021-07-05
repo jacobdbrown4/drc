@@ -1,6 +1,7 @@
 import spydrnet as sdn
+from spydrnet.uniquify import uniquify
+from spydrnet.util import selection
 from spydrnet.util.selection import Selection
-from spydrnet_shrec.transformation.replication.organ import XilinxDWCDetector
 '''
 Check By Pin Connections
 ========================
@@ -50,8 +51,8 @@ def fix_instance_connection_name(current_instance,suffix):
     stop_index = start_index + len(suffix) + 2
     if start_index is -1:
         modified_name_prefix = current_instance.name
-    elif stop_index is -1:
-        modified_name_prefix = current_instance.name[:start_index-1]
+    # elif stop_index is -1:
+    #     modified_name_prefix = current_instance.name[:start_index-1]
     else :
         modified_name_prefix = current_instance.name[:start_index-1] + current_instance.name[stop_index:]
     return modified_name_prefix
@@ -61,7 +62,7 @@ def get_pin_connections(instance_list,organ_name,suffix):
         start_index = instance.name.find(suffix)
         stop_index = start_index + len(suffix) + 2
         if start_index is -1:
-                key = ''
+            key = ''
         else:
             key = instance.name[start_index:stop_index]
         for pin in instance.get_pins(selection = Selection.OUTSIDE):
@@ -75,7 +76,7 @@ def get_pin_connections(instance_list,organ_name,suffix):
                         pin_num = []
                     else:
                         pin_num = sorted(list(fix_instance_connection_name(x.instance,suffix) for x in pins))
-            
+
                 if pin.inner_pin.port.name in instance._data:
                     instance[pin.inner_pin.port.name] = instance[pin.inner_pin.port.name]+ pin_num
                 else:
@@ -99,7 +100,7 @@ def check_next_list(next_instances,organ_name,key,suffix):
         if organ_name in next_instances[i].instance.name.upper() or 'COMPLEX' in next_instances[i].instance.name:
             output_pin = next(next_instances[i].instance.get_pins(selection = Selection.OUTSIDE,filter=lambda x:x.inner_pin.port.direction is sdn.OUT),None)
             if output_pin.wire:
-                possible_next = get_next_instances(output_pin,organ_name,'',suffix) 
+                possible_next = get_next_instances(output_pin,organ_name,'',suffix)
                 to_add = to_add + possible_next
             to_remove.append(next_instances[i])
     next_instances = next_instances + to_add
@@ -107,10 +108,19 @@ def check_next_list(next_instances,organ_name,key,suffix):
         if key in instance.instance.name:
             None
         elif suffix not in instance.instance.name:
+            #maybe move this around to be like check for drivers. First check leaf or not. then do rest.
             if key in instance.inner_pin.port.name:
                 None
             elif suffix not in instance.inner_pin.port.name:
                 None
+            #     wires = []
+            #     for pin2 in instance.inner_pin.port.get_pins(selection = Selection.OUTSIDE):
+            #         if pin2.wire:
+            #             wires.append(pin2.wire)
+            #     if not wires:
+            #         to_remove.append(instance)
+            #     else:
+            #         None
             elif 'COMPLEX' in instance.inner_pin.port.name:
                 None
             else:
@@ -124,7 +134,7 @@ def get_organ_previous(current_pin,organ_name):
     previous_instances = []
     previous_instances = list(pin2 for pin2 in current_pin.wire.get_pins(selection = Selection.OUTSIDE, filter = lambda x: (x is not current_pin and organ_name not in x.instance.name and 'COMPLEX' not in x.instance.name)is True))
     return previous_instances
-    
+
 def get_previous_instance(current_pin,organ_name,key,suffix):
     previous_instances = []
     to_remove = []
@@ -135,12 +145,11 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
             input_pins = list(pin for pin in previous_instances[i].instance.get_pins(selection = Selection.OUTSIDE,filter=lambda x:x.inner_pin.port.direction is sdn.IN))
             possible_next = []
             for pin in input_pins:
-                possible_next = possible_next + get_organ_previous(pin,organ_name) 
+                possible_next = possible_next + get_organ_previous(pin,organ_name)
             to_add = to_add + possible_next.copy()
             to_remove.append(previous_instances[i])
     previous_instances = previous_instances + to_add
     previous_instances = list(x for x in previous_instances if x not in to_remove)
-    
     driver = None
     for instance in previous_instances:
         if instance.instance.is_leaf() and instance.inner_pin.port.direction is sdn.OUT:
@@ -163,7 +172,7 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
     return [driver]
 
 def compare_pin_connections(original,modified,suffix,name):
-    print("results printed to connections_"+name+".txt")
+    # print("results printed to connections_"+name+".txt")
     f = open("connections_"+name+".txt",'w')
     not_matched = []
     for instance_modified in modified:
@@ -172,8 +181,8 @@ def compare_pin_connections(original,modified,suffix,name):
         stop_index = start_index + len(suffix) + 2
         if start_index is -1:
             modified_name_prefix = instance_modified.name
-        elif stop_index is -1:
-            modified_name_prefix = instance_modified.name[:start_index-1]
+        # elif stop_index is -1:
+        #     modified_name_prefix = instance_modified.name[:start_index-1]
         else :
             modified_name_prefix = instance_modified.name[:start_index-1] + instance_modified.name[stop_index:]
         matched = False
@@ -202,8 +211,7 @@ def compare_pin_connections(original,modified,suffix,name):
 
 
 
-# netlist = sdn.parse('stopwatch_no_buf.edf')
-# netlist2 = sdn.parse('stopwatch_no_buf_modified.edf')
+netlist = sdn.parse('stopwatch_no_buf.edf')
+netlist2 = sdn.parse('stopwatch_no_buf_modified.edf')
 
-# print(check_by_pin_connections(netlist,netlist2,'TMR','VOTER'))
-
+print(check_by_pin_connections(netlist,netlist2,'TMR','VOTER'))
