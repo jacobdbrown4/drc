@@ -2,6 +2,8 @@ import spydrnet as sdn
 from spydrnet.uniquify import uniquify
 from spydrnet.util.selection import Selection
 import time
+
+from pin_connections_edit import get_previous_instance
 '''
 Check By Pin Connections
 ========================
@@ -20,6 +22,22 @@ def check_by_pin_connections(original_netlist,modified_netlist,suffix,organ_name
     t0 = time.time()
     global top_instances
     top_instances = [original_netlist.top_instance,modified_netlist.top_instance]
+    global get_next
+    global get_previous
+    global fix_name
+    global check_next
+    get_next = 0
+    get_previous = 0
+    fix_name = 0
+    check_next = 0
+    global get_next_total_time
+    global get_previous_total_time
+    global fix_name_total_time
+    global check_next_total_time
+    get_next_total_time = 0
+    get_previous_total_time = 0
+    fix_name_total_time = 0
+    check_next_total_time = 0
 
     uniquify(original_netlist)
     t2 = time.time()
@@ -44,9 +62,14 @@ def check_by_pin_connections(original_netlist,modified_netlist,suffix,organ_name
     not_matched = compare_pin_connections(original_non_leafs,modified_instances,suffix,original_netlist.name)
     t1 = time.time()
     print("FULL CHECK PIN CONNECTIONS TIME:",t1-t0)
+
+    print("get_next visited",get_next,"for total time of",get_next_total_time)
+    print("check_next visited",check_next,"for total time of",check_next_total_time)
+    print('get_previous visited',get_previous,"for total time of",get_previous_total_time)
+    print('fix_name visited', fix_name,"for total time of",fix_name_total_time)
     if not_matched:
-        for item in not_matched:
-            print(item.name,' from ',item.parent.name)
+        # for item in not_matched:
+        #     print(item.name,' from ',item.parent.name)
         return False
     else:
         return True
@@ -64,6 +87,9 @@ def filter_instances(instance,organ_name):
         return True
 
 def fix_instance_connection_name(current_instance,suffix):
+    global fix_name
+    fix_name += 1
+    t0 = time.time()
     modified_name_prefix = None
     start_index = current_instance.name.find(suffix)
     stop_index = start_index + len(suffix) + 2
@@ -71,6 +97,9 @@ def fix_instance_connection_name(current_instance,suffix):
         modified_name_prefix = current_instance.name
     else :
         modified_name_prefix = current_instance.name[:start_index-1] + current_instance.name[stop_index:]
+    t1 = time.time()
+    global fix_name_total_time
+    fix_name_total_time += t1-t0
     return modified_name_prefix
 
 def get_pin_connections(instance_list,organ_name,suffix):
@@ -104,23 +133,41 @@ def get_pin_connections(instance_list,organ_name,suffix):
 
 
 def get_next_instances(current_pin,organ_name,key,suffix):
+    global get_next
+    get_next += 1
+    t0 = time.time()
+
     next_instances = []
     next_instances = list(pin2 for pin2 in current_pin.wire.get_pins(selection = Selection.OUTSIDE, filter = lambda x: (x is not current_pin)))
     next_instances = check_next_list(next_instances,organ_name,key,suffix)
+    t1 = time.time()
+    global get_next_total_time
+    get_next_total_time += t1-t0
     return next_instances
 
 def check_next_list(next_instances,organ_name,key,suffix):
+    global check_next
+    global check_next_total_time
+    check_next += 1
+    t0 = time.time()
     to_remove = []
     to_add = []
+    got_voters_next_so_done = False
     for i in range(len(next_instances)):
         if organ_name in next_instances[i].instance.name.upper() or 'COMPLEX' in next_instances[i].instance.name:
-            print("Found voter out of: ",len(next_instances))
             output_pin = next(next_instances[i].instance.get_pins(selection = Selection.OUTSIDE,filter=lambda x:x.inner_pin.port.direction is sdn.OUT),None)
             if output_pin.wire:
-                possible_next = get_next_instances(output_pin,organ_name,'',suffix)
+                possible_next = get_next_instances(output_pin,organ_name,key,suffix)
                 to_add = to_add + possible_next
             to_remove.append(next_instances[i])
+            if key in next_instances[i].instance.name.upper() or suffix not in next_instances[i].instance.name.upper():
+                got_voters_next_so_done = True
     next_instances = next_instances + to_add
+    if got_voters_next_so_done:
+        next_instances = list(x for x in next_instances if not x in to_remove)
+        t1 = time.time()
+        check_next_total_time += t1-t0
+        return next_instances
     for instance in next_instances:
         if instance.instance.is_leaf():
             if key in instance.instance.name:
@@ -148,6 +195,8 @@ def check_next_list(next_instances,organ_name,key,suffix):
         else:
             to_remove.append(instance)
     next_instances = list(x for x in next_instances if not x in to_remove)
+    t1 = time.time()
+    check_next_total_time += t1-t0
     return next_instances
 
 def get_organ_previous(current_pin,organ_name):
@@ -156,6 +205,10 @@ def get_organ_previous(current_pin,organ_name):
     return previous_instances
 
 def get_previous_instance(current_pin,organ_name,key,suffix):
+    global get_previous
+    global get_previous_total_time
+    get_previous += 1
+    t0 = time.time()
     previous_instances = []
     to_remove = []
     to_add = []
@@ -166,22 +219,26 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
             possible_next = []
             for pin in input_pins:
                 possible_next = possible_next + get_organ_previous(pin,organ_name)
-            to_add = to_add + possible_next.copy()
+            to_add = to_add + possible_next
             to_remove.append(previous_instances[i])
     previous_instances = previous_instances + to_add
     previous_instances = list(x for x in previous_instances if x not in to_remove)
     driver = None
-    i = 0
+    # i = 0
     previous_instances.reverse()
     for instance in previous_instances:
         if instance.instance.is_leaf() and instance.inner_pin.port.direction is sdn.OUT:
             if key in instance.instance.name:
                 driver = instance
                 # print(len(previous_instances),' - ',i)
+                t1 = time.time()
+                get_previous_total_time += t1-t0
                 return driver
             elif suffix not in instance.instance.name:
                 driver = instance
                 # print(len(previous_instances),' - ',i)
+                t1 = time.time()
+                get_previous_total_time += t1-t0
                 return driver
         elif not instance.instance.is_leaf():
             if key in instance.inner_pin.port.name or suffix not in instance.inner_pin.port.name:
@@ -190,20 +247,28 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
                         if instance.inner_pin.port.direction is sdn.IN:
                             driver = instance
                             # print(len(previous_instances),' - ',i)
+                            t1 = time.time()
+                            get_previous_total_time += t1-t0
                             return driver
                     else:
                         if instance.inner_pin.port.direction is sdn.OUT:
                             driver = instance
                             # print(len(previous_instances),' - ',i)
+                            t1 = time.time()
+                            get_previous_total_time += t1-t0
                             return driver
                 else:
                     if instance.inner_pin.port.direction is sdn.IN:
                         driver = instance
                         # print(len(previous_instances),' - ',i)
+                        t1 = time.time()
+                        get_previous_total_time += t1-t0
                         return driver
         # i+=1
     # if len(previous_instances) > i + 1:
     # print(len(previous_instances),' - ',i)
+    t1 = time.time()
+    get_previous_total_time += t1-t0
     return driver
 
 def compare_pin_connections(original,modified,suffix,name):
@@ -212,14 +277,6 @@ def compare_pin_connections(original,modified,suffix,name):
     f = open("connections_"+name+".txt",'w')
     not_matched = []
     for instance_modified in modified:
-    #     modified_name_prefix = None
-    #     start_index = instance_modified.item.name.find(suffix)
-    #     stop_index = start_index + len(suffix) + 2
-    #     if start_index is -1:
-    #         modified_name_prefix = instance_modified.item.name
-    #     else :
-    #         modified_name_prefix = instance_modified.item.name[:start_index-1] + instance_modified.item.name[stop_index:]
-        # modified_name_prefix = None
         modified_name_prefix = fix_instance_connection_name(instance_modified.item,suffix)
         matched = False
         if instance_modified.parent.item.reference.name in original.keys():
