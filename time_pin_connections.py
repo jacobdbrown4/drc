@@ -1,9 +1,9 @@
 import spydrnet as sdn
 from spydrnet.uniquify import uniquify
+from spydrnet.util import selection
 from spydrnet.util.selection import Selection
 import time
-
-from pin_connections_edit import get_previous_instance
+from spydrnet_shrec.analysis.pin_clock_domain_analysis import pin_clock_domain_analysis
 '''
 Check By Pin Connections
 ========================
@@ -42,11 +42,14 @@ def check_by_pin_connections(original_netlist,modified_netlist,suffix,organ_name
     uniquify(original_netlist)
     t2 = time.time()
     original_instances = list(x for x in original_netlist.get_hinstances(recursive=True,filter = lambda x: (filter_instances(x.item,organ_name)) is True))
+    get_hports_instances(original_netlist,organ_name,suffix)
+    # information = pin_clock_domain_analysis(original_netlist)
     get_pin_connections(original_instances,organ_name,suffix)
     t3 = time.time()
     print("GET ORIGINAL PIN CONNECTION TIME:",t3-t2)
     t4 = time.time()
     modified_instances = list(x for x in modified_netlist.get_hinstances(recursive=True,filter = lambda x: (filter_instances(x.item,organ_name)) is True))
+    get_hports_instances(modified_netlist,organ_name,suffix)
     get_pin_connections(modified_instances,organ_name,suffix)
     t5 = time.time()
     print("GET MODIFIED PIN CONNECTIONS TIME:",t5-t4)
@@ -102,6 +105,40 @@ def fix_instance_connection_name(current_instance,suffix):
     fix_name_total_time += t1-t0
     return modified_name_prefix
 
+def get_hports_instances(netlist,organ_name,suffix):
+    desired_port_names = ['CLK','RST']
+    for port in netlist.get_hports(filter=lambda x: (x.item.direction is sdn.IN and any(name in x.item.name.upper() for name in desired_port_names))):
+        for pin in port.item.get_pins(selection = Selection.INSIDE):
+            next_instances = get_next_instances(pin,organ_name,'','')
+            next_instances = check_instances(next_instances,organ_name)
+            for instance in next_instances:
+                add_info(instance.instance,instance,[netlist.top_instance.name])
+
+def check_instances(instance_list,organ_name):
+    to_remove = []
+    to_add = []
+    # possible_next = []
+    for instance in instance_list:
+        if "BUF" in instance.instance.reference.name.upper():
+            to_remove.append(instance)
+            for pin in instance.instance.get_pins(selection = Selection.OUTSIDE,filter=lambda x: (x.inner_pin.port.direction is sdn.OUT)):
+                possible_next = get_next_instances(pin,organ_name,'','')
+                to_add = to_add + check_instances(possible_next,organ_name)
+
+        elif not instance.instance.is_leaf():
+            to_remove.append(instance)
+            possible_next = []
+            for current_pin in instance.inner_pin.port.get_hpins():
+                if current_pin.item.wire:
+                    for pin2 in current_pin.item.wire.get_pins(selection=selection.Selection.OUTSIDE,filter=lambda x: (x is not current_pin)is True):
+                        if pin2.instance in instance.instance.reference.children:
+                            possible_next.append(pin2)
+            to_add = to_add + check_instances(possible_next,organ_name)
+    instance_list = instance_list + to_add
+    instance_list = list(x for x in instance_list if x not in to_remove)
+    return instance_list
+
+
 def get_pin_connections(instance_list,organ_name,suffix):
     for instance in instance_list:
         instance = instance.item
@@ -116,20 +153,35 @@ def get_pin_connections(instance_list,organ_name,suffix):
                 if pin.inner_pin.port.direction is sdn.OUT:
                     pins = set(x.instance for x in get_next_instances(pin,organ_name,key,suffix))
                     neighbor_pins = sorted(list(x for x in set(fix_instance_connection_name(x,suffix) for x in pins)))
+                    add_info(instance,pin,neighbor_pins)
                 elif pin.inner_pin.port.direction is sdn.IN:
-                    previous_pin = get_previous_instance(pin,organ_name,key,suffix)
-                    if previous_pin is None:
-                        neighbor_pins = []
-                    else:
-                        neighbor_pins = [fix_instance_connection_name(previous_pin.instance,suffix)]
+                    get_previous = True
+                    if pin.inner_pin.port.name in instance._data:
+                        if instance[pin.inner_pin.port.name]:
+                            get_previous = False
+                            # print("get previous is false for",pin.inner_pin.port.name,"of",instance.name,'from',instance.parent.name)
+                    if get_previous:
+                        previous_pin = get_previous_instance(pin,organ_name,key,suffix)
+                        if previous_pin is None:
+                            neighbor_pins = []
+                        else:
+                            neighbor_pins = [fix_instance_connection_name(previous_pin.instance,suffix)]
+                        add_info(instance,pin,neighbor_pins)
 
-                if pin.inner_pin.port.name in instance._data:
-                    instance[pin.inner_pin.port.name] = instance[pin.inner_pin.port.name] + neighbor_pins
-                else:
-                    instance[pin.inner_pin.port.name] = neighbor_pins
+                # add_info(instance,pin,neighbor_pins)
+                # if pin.inner_pin.port.name in instance._data:
+                #     instance[pin.inner_pin.port.name] = instance[pin.inner_pin.port.name] + neighbor_pins
+                # else:
+                #     instance[pin.inner_pin.port.name] = neighbor_pins
             else:
                 if not pin.inner_pin.port.name in instance._data:
                     instance[pin.inner_pin.port.name] = []
+
+def add_info(current_instance,current_pin,info):
+    if current_pin.inner_pin.port.name in current_instance._data:
+        current_instance[current_pin.inner_pin.port.name] = current_instance[current_pin.inner_pin.port.name] + info
+    else:
+        current_instance[current_pin.inner_pin.port.name] = info
 
 
 def get_next_instances(current_pin,organ_name,key,suffix):
@@ -177,10 +229,11 @@ def check_next_list(next_instances,organ_name,key,suffix):
             else:
                 to_remove.append(instance)
         elif not instance.instance.is_leaf():
-            wires = []
-            for pin2 in instance.inner_pin.port.get_pins(selection = Selection.OUTSIDE):
-                if pin2.wire:
-                    wires.append(pin2.wire)
+            # wires = []
+            wires = list(x for x in instance.inner_pin.port.get_wires(selection = Selection.OUTSIDE))
+            # for pin2 in instance.inner_pin.port.get_pins(selection = Selection.OUTSIDE):
+            #     if pin2.wire:
+            #         wires.append(pin2.wire)
             if not wires:
                 to_remove.append(instance)
             else:
@@ -204,6 +257,12 @@ def get_organ_previous(current_pin,organ_name):
     previous_instances = list(pin2 for pin2 in current_pin.wire.get_pins(selection = Selection.OUTSIDE, filter = lambda x: (x is not current_pin and organ_name not in x.instance.name and 'COMPLEX' not in x.instance.name)is True))
     return previous_instances
 
+def filter_previous_instances(instance_list):
+    #gotta be a leaf and out
+    #or its parent and in
+    # or a non leaf and out
+    None
+
 def get_previous_instance(current_pin,organ_name,key,suffix):
     global get_previous
     global get_previous_total_time
@@ -212,7 +271,7 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
     previous_instances = []
     to_remove = []
     to_add = []
-    previous_instances = list(pin2 for pin2 in current_pin.wire.get_pins(selection = Selection.OUTSIDE, filter = lambda x: (x is not current_pin)))
+    previous_instances = list(pin2 for pin2 in current_pin.wire.get_pins(selection = Selection.OUTSIDE, filter = lambda x: (x is not current_pin and not (x.instance.is_leaf() and x.inner_pin.port.direction is sdn.IN))is True))
     for i in range(len(previous_instances)):
         if organ_name in previous_instances[i].instance.name or 'COMPLEX' in previous_instances[i].instance.name:
             input_pins = list(pin for pin in previous_instances[i].instance.get_pins(selection = Selection.OUTSIDE,filter=lambda x:x.inner_pin.port.direction is sdn.IN))
@@ -221,22 +280,21 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
                 possible_next = possible_next + get_organ_previous(pin,organ_name)
             to_add = to_add + possible_next
             to_remove.append(previous_instances[i])
+        # elif not (previous_instances[i].instance.is_leaf() and previous_instances[i].inner_pin.port.direction is sdn.OUT):
+        #     to_remove.append(previous_instances[i])
     previous_instances = previous_instances + to_add
     previous_instances = list(x for x in previous_instances if x not in to_remove)
     driver = None
-    # i = 0
-    previous_instances.reverse()
+    # previous_instances.reverse()
     for instance in previous_instances:
         if instance.instance.is_leaf() and instance.inner_pin.port.direction is sdn.OUT:
             if key in instance.instance.name:
                 driver = instance
-                # print(len(previous_instances),' - ',i)
                 t1 = time.time()
                 get_previous_total_time += t1-t0
                 return driver
             elif suffix not in instance.instance.name:
                 driver = instance
-                # print(len(previous_instances),' - ',i)
                 t1 = time.time()
                 get_previous_total_time += t1-t0
                 return driver
@@ -246,27 +304,21 @@ def get_previous_instance(current_pin,organ_name,key,suffix):
                     if instance.instance.reference.name is current_pin.instance.parent.name:
                         if instance.inner_pin.port.direction is sdn.IN:
                             driver = instance
-                            # print(len(previous_instances),' - ',i)
                             t1 = time.time()
                             get_previous_total_time += t1-t0
                             return driver
                     else:
                         if instance.inner_pin.port.direction is sdn.OUT:
                             driver = instance
-                            # print(len(previous_instances),' - ',i)
                             t1 = time.time()
                             get_previous_total_time += t1-t0
                             return driver
                 else:
                     if instance.inner_pin.port.direction is sdn.IN:
                         driver = instance
-                        # print(len(previous_instances),' - ',i)
                         t1 = time.time()
                         get_previous_total_time += t1-t0
                         return driver
-        # i+=1
-    # if len(previous_instances) > i + 1:
-    # print(len(previous_instances),' - ',i)
     t1 = time.time()
     get_previous_total_time += t1-t0
     return driver
