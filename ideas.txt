@@ -1,150 +1,78 @@
 
-
-Tests to make:
-    organ insertion
-    uniquify nmr property - Done - add isinstance(...,str) to only get string values? and not integers?
-    load primitive info
-    find all leaf cells
-    feed back folding
-    pin clock domain analysis
-
-Documentation:
-    pin_clock_domain_analysis
-        finds the different clock domains?
-        will print a report
-        will return a list of dictionaries. Each is an inner pin and its <<<Something>>> inner pins
-
-    feedback folding
-    find voter insertion points pin level????
-
-COMPLEX
-    add_modified. output ports not triplicated.
-    add0 through add3 voters are named COMPLEX and output to 4 output LED's. It is its own cable.
-    Then the other add instances have voters that output to the other 4 output bufs. Its own cable again.
-    In original, it's all together. Not sure why it got split up.
-
-
-Design Rule Check:
-    Fully replicated:
-        No organs: check_by_step, check_by_pin_connections, check_by_instance_properties, check_by_instance_connections
-        Organs: check_by_step, check_by_pin_connections, check_by_instance_properties, check_by_instance_connections
-        Complex: check_by_step, check_by_pin_connections, check_by_instance_properties, check_by_instance_connections
-
-    Output not replicated:
-        No organs: check_by_instance_properties
-        Organs: check_by_step, check_by_pin_connections, check_by_instance_properties, check_by_instance_connections
-        Complex: check_by_step, check_by_pin_connections, check_by_instance_properties, check_by_instance_connections
-
-Functions:
-    check_by_pin_connections
-        - DOES: makes sure what was connected is still connected by checking each instance's pins
-        - doesn't work for only tmr with not output ports
-        - works for full tmr with and without organs
-        - works for partial tmr with organs
-    check_by_step
-        - DOES: steps through a design.
-        - doesn't work for only tmr with not output ports
-        - works for full tmr with and without organs
-        - works for partial tmr with organs
-    check_by_instance_properties
-        - DOES: compare's each instance's EDIF.properties with the corresponding original instance
-        - works for all
-    , check_by_instance_connections
-        - DOES: checks what each instance connects to (whether leaf or non leaf)
-        - doesn't work for only tmr with not output ports
-        - works for full tmr with and without organs
-        - works for partial tmr with organs
-
-
-Note: sometimes it won't insert voters if there are buffers/if buffers are replicated. So get rid of buffers in the list and it will insert voters.
-    That's how I fixed 4bitadder and one_counter
-
-
-ignore VCC in check by pin connections?
-
-
-find_voter_insertion_points
-    Line 77 in find_voter_insertion_points . Get rid of pin.wire and see what happens.
-        maybe it'll insert voters into non replicated, disconnected ports.
-        Lines 79-83 too. It checks if there is a wire.
-
-    Line 94 -97. see what it does. Does it find the next leaf that it drives?
-            wires = sub_pin.get_hwires(selection="ALL")
-            pins = set(sdn.get_hpins(wires, filter=lambda x: x.item.port.definition.is_leaf() and x.item.port.direction is sdn.IN))
-            instances = set(sdn.get_hinstances(pins))
-
-    Line 102 - can't there be multiple outter pins for that one sub_pin? Or is it dif cause it's an href?
-        It looks like it might just get the first one?
-
-
-try instance.get_pins(outside) vs instance.get_hpins(inside or outside)
-
-
-Went over with Andrew:
-    - can use find_voter_insertion points for detectors, but it may not be best. He suggested doing insertion without including feedback. only reduction would be good. You don't need so many detectors throughout it, especially in feedback.
-    - surface_pins : can bring detector output pins up. Helpful with just detectors??
-    - Find a project to work on the side using these tools. TMR it. Does it work? Insert detectors. Does it work? etc.
-    - try some stuff out using the tools. Mess with it.
-
-
 Where I left off/to do:
     SpyDrNet:
         Talk about a DRC for SpyDrNet. What could we do?
         work on getter cheat sheet
-        Test to check netlists?? For case sensitive stuff
-        Clean up spydrnet front page. Now Verilog is supported. Also is vo and vqm??
+        Test to check netlists?? For case sensitive stuff.
+            look through, if found two names that are the same just different cases, pass a warning.
+            see check_netlist.py
+        Clean up spydrnet front page. Now Verilog is supported. Is vo and vqm also supported??
+        fix float demo netlist. It keeps messing things up. remove the messed up line.
+        add visualizer module in spydrnet. It displays hierarchy, netlists, definitions, instances, other helpful info.
+            that might be cool.
+        in the example netlist readme, explain what each netlist is
     Documentation:
-        Organs documentation
-        Voter algorithms page. Get Ben's document?
-        Run pylint for every release. Document our score.
-        Get Andy's script that works for his design. Add it as another example. Get the netlist too. We need to document this.
-        add references to other pages in the documentation e.g. used in find_voter_insertion_points() (make it a link)
-        add stopwatch_no_buf tmr as an example? include constraints and everything for the basys 3 board
-        add example of doing stopwatch with TMR and DWC together? Like we tmr it like normal and put detectors in as well?
+        add stuff about tarjan and scc and everything in find_voter_insertion_points
+        Get Andrew's partial tmr and dwc scripts and add them to repo.
+            where to add them...examples? what about the netlists? support files for examples? 
+        add talk about putting voters in feedback
+        combined organ example 
+        add info about how we're doing projects on the spydrnet wiki
+        more examples
     Testing:
-        we have lots of testing using drc for edif netlists but not verilog. work on that.
-    Functions:
-        Find high fan out flip flops and put a voter on their input. Cause they're important so we want them to be right.
-        shouldn't reduction voters be placed wherever we're going from replicated to non-replicated even if it's not a flip flop? 
-            write a function to find and fix this. Take replicas, find what got left out, check if there are reduction voters, if not, add a spot.  
-        get total leaf instance count. Then order from highest to low of how many other leafs each outputs to. Then get top 10% or so and give them voters.
-            or just flip flops os we can cut feedback.
+        there is lots of testing using the drc for edif netlists but not verilog. work on that.
+        try tmr and the drc's with verilog netlists
     DRC:   
-        try drc out with before_ff now that it's fixed. It don't work. Still broke on b13
-        add an example showing how to use the drc. It's simple but will be good. Maybe show a passed test and a failed test.
-        compare properties takes too long. optimize by making each non_leaf a dictionary full of his leaf children, just like in the other one.
-            see if the above is enough and we don't have to make strings out of everything.
+        instead of having one dictionary full of the non leafs, make dictionaries inside of dictionaries?
+            if it could shave time off, it's probably worth it. 
+            So we have the href, and we can jump down into non leaf dictionaries until we get down to the right leafs?
+        add number of instances checked to the output of the drc's?
+        add check in drc_insert_organs to make sure there are no rogue organs that are in the design and shouldn't be there.
+            also test to make sure each organ outputs to something. If not, that ain't right. 
+            If no wire, nope.
+            If nothing on other end of wire, nope. Or maybe it's okay?
+        To speed up the DRC more, maybe get each non leaf in port and get what it drives and add that as the driver. so we visit get_previous less.
+            check_netlist.py to check for weird case stuff in netlists. 
+        instead of changing the current DRC, 
+            add another check to make sure wires not inputting to organs are connected to only their own domain.
+                another way to do it is make sure each instance outputs to only his domain (unless it's an organ)
     Other:
-        Test Travis with the DRC patch release
-        should travis only run when merging with master?
-        When to do a patch release?
-        look into submodules
-        make insert organs so it can insert a voter at the in port.
+        bug in get_hpins for the adder pins? try getting drivers in adder without uniquifying.
+            why is it doing that? wire.pins is fine, but not get_hpins
+        add get_href as an attribute of each element. it'll return the hierarchical reference of that object.
+        insert_organs
+            maybe have it check to see if the wire is driven by something replicated,
+                if not replicated, don't insert organ and print something. cause it's pointless.
+                look at driver, if inner pin, check to see if port in replicas
+                                if outer pin, check to see if instance in replicas
+        what is sticky detector? It looks like it uses the clock so it'll not change until clock edges. so it's 'sticky'
+        add merge_wire function that will merge two wires (move all pins to the other and trash the one)
+        run andy's fiate script again and check connections
+    Working on:
+        Get Andrew's partial tmr and dwc scripts and add them to repo.
+        some stuff in the spydrnet tmr tutorial is better and should be moved to shrec.
+        remove stuff about johnson paper about scc's? Or is it okay to leave it ?
+        make sure test drc insert organs fail uses a netlist that will have organs.
+        SpyDrNet_SHREC Dependent
+        pylint in github actions
+        fix broken reduction voters in fancy algorithm
+        General Voter good? 
+        Add pylint
+        in ben's find reduction voter points, check each non leaf. If it's output is disconnected, put reduction voter on its inner pin of the output.
 
 
-    Use pin clock domain analysis? It seems to do it. For each of the ports returned, add the drivers.
-        or instead of trying to do pin clock domain analysis or this other stuff you have, for each instance's next instances, add that instance as their driver. Then if they don't have a driver, check.??
-            But what if they have two drivers? Messed up.
-        ***Or if next instance port driven is in [clk,rst,etc.], add it as the driver. Otherwise nah. TRY IT. it won't rely on clock analysis function thing
-        I guess if we run clock analysis on both netlists it should come out to equal. Like if one has extra info, so does the other.
-
-    DRC works for find_voter_insertion_points and find_voter_insertion_points_after_ff, but not before ff. Look into that
-        uncomment the one line for recursion errors? fixed it?
-        does before_ff mess up some connections?
-        debuggin before_ff, tell Ben to add selection.OUTSIDE to get_current_pin
-
-    Another Bug? No, but a messed up netlist:
-
-        In float_demo example netlist, fully replicated with voters, i_synth_TMR_#_m_axis_result_tdata[63:0]_VOTER[62] and [63] drive the same wire.
-        there is another wire there, but he's not connected. Somehow the connections got messed up.
-        Not a compose issue, because i looked at it before composing and saw the same issue.
-        weird line in original edif file looks like this:
-
-                (net (rename m_axis_result_tdata_0_ "m_axis_result_tdata[0]") (joined
-                (portref (member m_axis_result_tdata 63) (instanceref i_synth))
-                (portref (member m_axis_result_tdata 63))
-                )
-                )
-                (net (rename m_aXIS_result_tdata_0_ "m_axis_result_tdata[0]") (joined))
-
-        So that could was messing it up ('aXIS'). After removing that line, it's all fixed. Parsing and connections and voters.
+Other algorithm:
+    Implement a feedback voter insertion that does not place all three triplicate voters at the same cut point. A paper that andres found cuts all feedback with voters and triplicates the voters but places the triplicates at different points along the feedback path. Doing so may alleviate common cause and single point failures. See Issue #13
+        Find every feedback point. Find what is in the path.
+        get the flip flop, get its driver, get that driver, and follow that up until we hit the flip flop
+        Do a special insertion algorithm that will insert voters at different cut points in the feedback path.
+        One way to start this is to put one before the ff, and one after the ff.
+        SEE NEW_ALGORITHM
+        we find some feedback paths. we give that path to insert organs
+            we recognize it as a list and do special stuff
+            divide length of path by number of replicas (3)
+            then jump that many steps between voters. 
+            at each step, insert a voter and have it output to one domain. switch of domains.
+            or do a complex/reduction insert by giving the source and sink.
+                be sure to give the sink of different domains
+            ****IT seems to be working
