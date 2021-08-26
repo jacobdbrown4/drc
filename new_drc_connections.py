@@ -111,33 +111,33 @@ class DRCConnections():
         key = find_key(instance.item,self.suffix)
         for pin in instance.get_hpins():
             port = pin.parent.item
-            associate_outer_pin = instance.item.pins[pin.item]
-            if associate_outer_pin.wire:
+            associated_outer_pin = instance.item.pins[pin.item]
+            if associated_outer_pin.wire:
                 if port.direction is sdn.OUT:
                     self.get_pin_connections_helper(instance.item,pin,key,dict)
                 elif port.direction is sdn.IN:
                     self.input_pins_todo_later.append((pin,key))
                 else:
-                    dict[pin.name].update(set('INOUT_PORT'))
+                    self.add_info_to_dict(associated_outer_pin,set('INOUT_PORT'),dict)
             else:
-                dict[pin.name] = set()
+                self.add_info_to_dict(associated_outer_pin,set(),dict)
     
     def get_non_leaf_pin_connections(self,instance,dict):
+        instance_item = instance
+        if instance.__class__ is sdn.HRef:
+            instance_item = instance.item
         for port in instance.get_hports():
             key = find_key(port.item,self.suffix)
             for hpin in port.item.get_hpins():
                 if port.item.direction is sdn.IN:
                     if hpin.item.wire:
                         pins = set(x for x in self.get_next_instances(hpin,hpin.item,key))
-                        self.add_drivers(instance,pins,dict)
+                        self.add_drivers(instance_item,port.item,pins,dict)
                 elif port.item.direction is sdn.OUT:
-                    instance_item = instance
-                    if instance.__class__ is sdn.HRef:
-                        instance_item = instance.item
                     pin = instance_item.pins[hpin.item]
                     if pin.wire:
                         pins = set(x for x in self.get_next_instances(hpin,pin,key))
-                        self.add_drivers(instance,pins,dict)
+                        self.add_drivers(instance_item,port.item,pins,dict)
 
     def get_netlist_hport_connections(self,netlist,dict):
         instance = netlist.top_instance
@@ -154,30 +154,31 @@ class DRCConnections():
         port = hpin.parent.item
         if port.direction is sdn.OUT:
             pins = set(x for x in self.get_next_instances(hpin,associated_outter_pin,key))
-            neighbor_pins = set(x.name for x in pins)
-            self.add_info_to_dict(hpin,neighbor_pins,dict)
-            self.add_drivers(instance,pins,dict)
+            neighbor_pin_info = set(x.instance.name+'/'+x.inner_pin.port.name+'/'+str(x.inner_pin.port.pins.index(x.inner_pin)) for x in pins)
+            self.add_info_to_dict(associated_outter_pin,neighbor_pin_info,dict)
+            self.add_drivers(instance,port,pins,dict)
         elif port.direction is sdn.IN:
             get_previous = True
-            if hpin.name in dict.keys():
+            if str(instance.name+'/'+port.name+'/'+str(port.pins.index(hpin.item))) in dict.keys():
                 get_previous = False
             if get_previous:
-                previous_pins = set(x.name for x in self.get_previous_instances(hpin,associated_outter_pin,key))
-                self.add_info_to_dict(hpin,previous_pins,dict)
+                previous_pin_info = set(x.instance.name+'/'+x.inner_pin.port.name+'/'+str(x.inner_pin.port.pins.index(x.inner_pin)) for x in self.get_previous_instances(hpin,associated_outter_pin,key))
+                self.add_info_to_dict(associated_outter_pin,previous_pin_info,dict)
 
-    def add_drivers(self,instance,pins,dict):
+    def add_drivers(self,instance,instance_port,pins,dict):
         for pin in pins:
-            self.add_info_to_dict(pin,[instance.name],dict)
+            self.add_info_to_dict(pin,[instance.name+'/'+instance_port.name+'/'+str(pin.inner_pin.port.pins.index(pin.inner_pin))],dict)
 
     def add_info_to_dict(self,pin,info,dict):
-        if pin.name in dict.keys():
-            dict[pin.name].update(set(info))
+        dict_key = pin.instance.name+'/'+pin.inner_pin.port.name+'/'+str(pin.inner_pin.port.pins.index(pin.inner_pin))
+        if dict_key in dict.keys():
+            dict[dict_key].update(set(info))
         else:
-            dict[pin.name] = set(info)
+            dict[dict_key] = set(info)
 
     def get_next_instances(self,hpin,current_pin,key):
         t0 = time()
-        next_instances = list(pin for pin in current_pin.wire.get_hpins() if pin is not hpin)
+        next_instances = list(pin for pin in current_pin.wire.get_pins(selection=Selection.OUTSIDE) if pin is not current_pin)
         next_instances = self.check_next_instances(next_instances,key)
         t1 = time()
         self.next += (t1-t0)
@@ -190,43 +191,46 @@ class DRCConnections():
         to_remove = []
         to_add = []
         for i,instance_pin in enumerate(next_instances):
-            instance_of_pin = instance_pin.parent.parent.item
+            # instance_of_pin = instance_pin.parent.parent.item
+            instance_of_pin = instance_pin.instance
             if self.is_organ(instance_of_pin):
-                organ_output_pins = list(x for x in instance_of_pin.get_hpins() if x.parent.item.direction is sdn.OUT)
+                organ_output_pins = list(x for x in instance_of_pin.get_pins(selection=Selection.OUTSIDE) if x.inner_pin.port.direction is sdn.OUT)
                 if organ_output_pins:
                     for pin in organ_output_pins:
-                        associate_outter_pin = instance_of_pin.pins[pin.item]
-                        if associate_outter_pin.wire:
-                            possible_next = self.get_organ_next(pin,associate_outter_pin,key)
+                        # associate_outter_pin = instance_of_pin.pins[pin.item]
+                        if pin.wire:
+                            possible_next = self.get_organ_next(pin,key)
                             to_add = to_add + possible_next
                 to_remove.append(instance_pin)
         next_instances += to_add
         next_instances = list(x for x in next_instances if not x in to_remove)
         return next_instances
     
-    def get_organ_next(self,organ_hpin,organ_current_pin,key):
+    def get_organ_next(self,organ_current_pin,key):
         to_remove = []
         to_add = []
-        next_instances = list(pin for pin in organ_current_pin.wire.get_hpins() if pin is not organ_hpin)
+        next_instances = list(pin for pin in organ_current_pin.wire.get_pins(selection=Selection.OUTSIDE) if pin is not organ_current_pin)
         for i,instance_pin in enumerate(next_instances):
-            instance_of_pin = instance_pin.parent.parent.item
+            # instance_of_pin = instance_pin.parent.parent.item
+            instance_of_pin = instance_pin.instance
             if self.is_organ(instance_of_pin):
-                organ_output_pins = list(x for x in instance_of_pin.get_hpins() if x.parent.item.direction is sdn.OUT)
+                organ_output_pins = list(x for x in instance_of_pin.get_pins(selection=Selection.OUTSIDE) if x.inner_pin.port.direction is sdn.OUT)
                 if organ_output_pins:
                     for pin in organ_output_pins:
-                        associate_outter_pin = instance_of_pin.pins[pin.item]
-                        if associate_outter_pin.wire:
-                            possible_next = self.get_organ_next(pin,associate_outter_pin,key)
+                        # associate_outter_pin = instance_of_pin.pins[pin.item]
+                        if pin.wire:
+                            possible_next = self.get_organ_next(pin,key)
                             to_add = to_add + possible_next
                 to_remove.append(instance_pin)
         next_instances += to_add
         for instance_pin in next_instances:
-            instance_of_pin = instance_pin.parent.parent.item
+            # instance_of_pin = instance_pin.parent.parent.item
+            instance_of_pin = instance_pin.instance
             if instance_of_pin.is_leaf():
                 if key not in instance_of_pin.name and self.suffix in instance_of_pin.name:
                     to_remove.append(instance_pin)
             else:
-                port = instance_pin.parent.item
+                port = instance_pin.inner_pin.port
                 wires = list(x for x in port.get_wires(selection = Selection.OUTSIDE))
                 if not wires and not instance_of_pin in self.top_instances:
                     to_remove.append(instance_pin)
@@ -244,38 +248,38 @@ class DRCConnections():
         previous_instances = []
         to_remove = []
         to_add = []
-        previous_instances = list(pin for pin in current_pin.wire.get_hpins() if not (pin.parent.parent.item.is_leaf() and pin.parent.item.direction is sdn.IN))
+        previous_instances = list(pin for pin in current_pin.wire.get_pins(selection=Selection.OUTSIDE) if not (pin.instance.is_leaf() and pin.inner_pin.port.direction is sdn.IN))
         for i,instance_pin in enumerate(previous_instances):
-            instance_of_pin = instance_pin.parent.parent.item
+            instance_of_pin = instance_pin.instance
             if self.is_organ(instance_of_pin):
-                input_pins = list(pin for pin in instance_of_pin.get_hpins() if pin.parent.item.direction is sdn.IN)
+                input_pins = list(pin for pin in instance_of_pin.get_pins(selection=Selection.OUTSIDE) if pin.inner_pin.port.direction is sdn.IN)
                 possible_next = []
-                for hpin in input_pins:
-                    associated_outter_pin = hpin.parent.parent.item.pins[hpin.item]
-                    possible_next += self.get_organ_previous(hpin,associated_outter_pin)
+                for pin in input_pins:
+                    # associated_outter_pin = hpin.parent.parent.item.pins[hpin.item]
+                    possible_next += self.get_organ_previous(pin)
                 to_add = to_add + possible_next
                 to_remove.append(instance_pin)
         previous_instances = previous_instances + to_add
         previous_instances = list(x for x in previous_instances if x not in to_remove)
-        driver = self.find_driver(previous_instances,hpin)
+        driver = self.find_driver(previous_instances,hpin,current_pin)
         t1 = time()
         self.previous += (t1-t0)
         return driver
 
-    def get_organ_previous(self,hpin,current_pin):
+    def get_organ_previous(self,current_pin):
         previous_instances = []
-        previous_instances = list(pin for pin in current_pin.wire.get_hpins() if (pin is not hpin and not self.is_organ(pin.parent.parent.item))is True)
+        previous_instances = list(pin for pin in current_pin.wire.get_pins(selection=Selection.OUTSIDE) if (pin is not current_pin and not self.is_organ(pin.instance))is True)
         return previous_instances
 
-    def find_driver(self,instance_list,current_hpin):
+    def find_driver(self,instance_list,current_hpin,current_pin):
         driver = []
         for instance_pin in instance_list:
-            instance_of_pin = instance_pin.parent.parent
-            port = instance_pin.parent.item
-            if instance_of_pin.item.is_leaf() and port.direction is sdn.OUT:
+            instance_of_pin = instance_pin.instance
+            port = instance_pin.inner_pin.port
+            if instance_of_pin.is_leaf() and port.direction is sdn.OUT:
                 driver.append(instance_pin)
             else:
-                if instance_of_pin is current_hpin.parent.parent.parent:
+                if instance_of_pin.reference is current_pin.instance.parent:
                     if port.direction is sdn.IN:
                         driver.append(instance_pin)
                 else:
@@ -296,6 +300,8 @@ class DRCConnections():
                 except KeyError:
                     if f:
                         f.write(key+ ' had no one to compare to\n')
+                        print(key_without_suffixes, ' from ', key)
+                        self.not_matched.append(key)
                     continue
                 
                 list_without_suffixes = set(get_original_name(x,self.suffix) for x in self.modified_port_dict[key])
